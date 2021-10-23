@@ -110,6 +110,8 @@ We can check that the product between these two factors is equal to 1.
 * The put option price using the binomial model is $12.0643
 * The put option price using the Black & Scholes model is $11.928
 
+![Screenshot](BinomialTree_Github.png)
+
 
 
 
