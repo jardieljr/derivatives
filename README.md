@@ -53,6 +53,59 @@ where
 with :
 
 ●	N(𝑥) is the cumulative probability function for a variable with standard normal distribution N(0,1) with a mean of 0 and a variance of 1.
+●	C and P are the prices of European call and put options respectively
+●	S0 is the underlying asset  price
+●	X is the strike price
+●	σ is the volatility
+●	r is the continuously compounded risk-free interest rate
+●	q is the continuously compounded dividend yield 
+●	t is the time to maturity
+
+Foundations of the Binomial Option Pricing Model
+
+The binomial option pricing model consists of an iterative approach, enabling the specification of nodes, during the time period between the valuation date and the option’s expiration date. Each iteration is segmented between two possible outcomes, a move up and move down that takes the shape of a binomial tree. 
+
+The assumptions of the Binomial Option Pricing Model
+
+The binomial option pricing model assumes that the price of the underlying asset will move up or down by a specified amount over a period. Based on the assumption that asset prices in the future follow binomial distribution, the no-arbitrage price of options can be determined. The binomial option pricing is relatively simple in computation even if it can become tedious for the implementation of a multi-period model.
+Compared with the black and Scholes model, the binomial model is useful for American options. The model provides empirical results according to the inputs we set, and the holder has the right to exercise at any time before expiration. Another significant advantage is the multi period view, which provides the transparency of the price and option value of the underlying asset over time.
+
+The underlying assumptions for the binomial option pricing model:
+
+●	At every point in time, two possible outcomes of the price; a move up and a move down
+●	The underlying asset pays dividends
+●	The risk-free interest rate (discount factor) is continuously compounded throughout the period;
+●	The market is frictionless, and there are no transaction costs and no taxes
+●	Investors are risk-neutral, indifferent to risk
+
+
+Part I :  European option by given parameters 
+
+Given by the following information and parameters, we designed a binomial model with continuously compounded dividends by 12 step trees.
+Firstly, we collect all the parameters and calculate the payoff of the option, We have continuously compounded interest rate, r = 1%, σ = 20%, continuously compounded dividend δ = 3%,12 periods with the maturity time of one year. the expected return on the stock is µ = 10%. we assume this is a call option and set the strike price of the option to be $105, the stock price was given by $100.
+
+1) We will model the stock returns of each period by u and d using the equations.
+
+u=e^(σ√h), d=e^(-σ√h),where σ is the annual volatility, and h is the length of a binomial period in years.
+We input the parameter and get u=1.0594, d=0.9439.
+
+2) The risk-neutral probability in one period is 〖p^*=(e^rh-d)/(u-d)〗^, where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factors per period.  We input the parameter and get p*=0.48.
+
+3) The payoff of the call option at the maturity:
+
+![Screenshot](PayOff_Call_Ex1_Github.png)
+
+4) The result of the option price and the evolution of the option price and hedging ratio at all nodes of the binomial tree:
+
+
+
+the call option price using the binomial model is $9.5097.
+
+
+
+
+
+	 
 
 
 
