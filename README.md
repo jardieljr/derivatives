@@ -125,11 +125,11 @@ We input all the parameters in the model and generate the result.
 
 ![Screenshot](Input_Github.jpg)
 
-The result of the binomial model is €20.3498.
+The result using our binomial model is €20.3498.
 
 ![Screenshot](Binomial_Pricing_Github.jpg)
 
-The result of the Black & Scholes model is €19.962.
+The result using our Black & Scholes model is €19.962.
 
 ![Screenshot](B&S_pricing_Github.jpg)
 
@@ -138,12 +138,28 @@ The result of the Black & Scholes model is €19.962.
 Both computations of the Airbus option with both models are consistent with the trading price of the option on the market : €20.42
 
 Even if our B&S computation has proved to be more accurate and robust in practise. However, in this case, the binomial model is the most accurate one. Which exposes the utility of such a model in some circomstances.
-Furthermore, we can explain the relative uncertainty in our computations with the theoretical trading price by the inputs we used to compute the option price. As a matter of fact, the volatility and dividend yield computed are affected by sources of uncertainties such as the time frame considered to calcule such inputs. In our case, we used a large timeframe to compute the volatilty. To optimize further the B&S computation, we think that by choosing a closer timeframe with the option issuing date computing the volatility, we can enhance our option pricing accuracy.
+Furthermore, we can explain the slight relative uncertainty in our computations with the theoretical trading price by the inputs we used to compute the option price that are certainly not computed the same way as the analysts computed them for the quote pricing. As a matter of fact, the volatility and dividend yield computed are affected by sources of uncertainties such as the time frame considered to calcule such inputs. In our case, we used a large timeframe to compute the volatilty. To optimize further the B&S computation, we think that by choosing a closer timeframe with the option issuing date computing the volatility, we can enhance our option pricing accuracy.
 On the other hand, we estimate that our play on the dividend yield variable present in the inputs is very limited, this parameter optimization won't lead to significative accuracy enhancement.
 
-# Models Stability & Flexibilty observations
+# Models Stability & Flexibilty observations - Limitations
 
+## Black & Scholes Model
 
+Our model has proven to be robust and accurate in all the configurations we set it up for the option pricing. No deviations from the theoretical price (calculated using B&S pricing calculators online) have been noticed. Plus, by computing the B&S model using both an Excel & VBA approach allow us to enhance further our model reliability. As a matter of fact, the pricing performed by these two approached (Excel & VBA) give always the same result at 10^-4.
+
+Regarding now the flexibility of the model, we can easiliy and quickly switch from inputs to pricing computations using our model. By trial and errors using mulitple inputs, we find that this method is the most reliable one. This observation is consistent with the fact that B&S is most commonly used in the industry to perform option pricing.
+
+However, some observations made the Binomial Model relevant and interesting in some configurations.
+
+## Binomial Model
+
+As a matter of fact, we noticed that for the Airbus option price, the binomial model proved to be more accurate than the B&S model, the result was closer to the real trading price.
+We can notice an enhanced accuracy of this model for option maturity times close to 1 year, which was the case with our Airbus option pricing. This could be explained by the binomial tree decomposition in 12 periods in adequation with the matuirty time, which allowed to increase our digits decomposition and expand our scalability whereas the linear model of the B&S strategy only enabled a capped accuracy.
+
+Both the binomial model and the Black-Scholes formula are based on the risk-neutral free policy, the Black-Scholes formula is a limiting case of the binomial formula for the price of a European option. In other words, if the binomial model can divide the time into infinite periods, they are the same. But the derivation of the Black-Scholes formula makes a assumption of continuous and Continuously compounded returns on the stock are normally distributed. For the binomial, it’s discrete which allow us to exercise the option at any point of the periods. So binomial model can work effectively with a complex option such as paying discrete dividends, American options which may exercise the option before the expiration. The Black-Scholes formula are more suitable for the European option which don’t allow to exercise in advance.
+
+However, we advise the user to always keep a critical eye on this binomial method. As a matter of fact, we notice that our pricing accuracy degrade when we decrease or increase the maturity time, the most stable point being at 1 year of maturity. Hence, to price an option with a matuity of few weeks or numerous years, we will privilege the B&S approach which will enable reliability and robustness.
+On the other hand, for options with 1 year of maturirty, regarding our observations performing both models on several underlying assets, we will prefer the Binomial Model accuracy, regularly closer to the real trading price.
 
 
 
