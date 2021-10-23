@@ -89,7 +89,7 @@ Firstly, we collect all the parameters and calculate the payoff of the option, W
 u=e^(σ√h), d=e^(-σ√h),where σ is the annual volatility, and h is the length of a binomial period in years.
 We input the parameter and get u=1.0594, d=0.9439.
 
-2) The risk-neutral probability in one period is 〖p^*=(e^rh-d)/(u-d)〗^, where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factors per period.  We input the parameter and get p*=0.48.
+2) The risk-neutral probability in one period is p*=(e^rh -d)/(u-d), where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factors per period.  We input the parameter and get p*=0.48.
 
 3) The payoff of the call option at the maturity:
 
