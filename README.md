@@ -145,7 +145,7 @@ On the other hand, we estimate that our play on the dividend yield variable pres
 
 ## Black & Scholes Model
 
-Our model has proven to be robust and accurate in all the configurations we set it up for the option pricing. No deviations from the theoretical price (calculated using B&S pricing calculators online) have been noticed. Plus, by computing the B&S model using both an Excel & VBA approach allow us to enhance further our model reliability. As a matter of fact, the pricing performed by these two approached (Excel & VBA) give always the same result at 10^-4.
+Our model has proven to be robust and accurate in all the configurations we set it up for the option pricing. No deviations from the theoretical price (calculated using B&S pricing calculators online) have been noticed. Plus, by computing the B&S model using both an Excel & VBA approach allow us to enhance further our model reliability. As a matter of fact, the pricing performed by these two approached (Excel & VBA) give always the same result at 10^-3.
 
 Regarding now the flexibility of the model, we can easiliy and quickly switch from inputs to pricing computations using our model. By trial and errors using mulitple inputs, we find that this method is the most reliable one. This observation is consistent with the fact that B&S is most commonly used in the industry to perform option pricing.
 
