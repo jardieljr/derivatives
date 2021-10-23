@@ -119,6 +119,7 @@ We calculate the daily return of Airbus’s stock prices, and get the annual vol
 From the market, we can find the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022.
 
 ![Screenshot](Airbus_Option_Github.jpg)
+* * Source : Bourse Direct
 
 We input all the parameters in the model and generate the result.
 
