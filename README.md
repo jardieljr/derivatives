@@ -69,12 +69,12 @@ The binomial option pricing model consists of an iterative approach, enabling th
 ## The assumptions of the Binomial Option Pricing Model
 
 The binomial option pricing model assumes that the price of the underlying asset will move up or down by a specified amount over a period. Based on the assumption that asset prices in the future follow binomial distribution, the no-arbitrage price of options can be determined. The binomial option pricing is relatively simple in computation even if it can become tedious for the implementation of a multi-period model.
-Compared with the black and Scholes model, the binomial model is useful for American options. The model provides empirical results according to the inputs we set, and the holder has the right to exercise at any time before expiration. Another significant advantage is the multi period view, which provides the transparency of the price and option value of the underlying asset over time.
+Compared with the Black and Scholes model, the binomial model is useful for American options. The model provides empirical results according to the inputs we set, and the holder has the right to exercise at any time before expiration. Another significant advantage is the multi period view, which provides the transparency of the price and option value of the underlying asset over time.
 
 ## The underlying assumptions for the binomial option pricing model
 
 * At every point in time, two possible outcomes of the price; a move up and a move down
-* The underlying asset pays dividends
+* The underlying asset can pay dividends or not
 * The risk-free interest rate (discount factor) is continuously compounded throughout the period;
 * The market is frictionless, and there are no transaction costs and no taxes
 * Investors are risk-neutral, indifferent to risk
@@ -82,14 +82,14 @@ Compared with the black and Scholes model, the binomial model is useful for Amer
 
 # Part I :  European option by given parameters 
 
-Given by the following information and parameters, we designed a binomial model with continuously compounded dividends by 12 step trees.
-Firstly, we collect all the parameters and calculate the payoff of the option, We have continuously compounded interest rate, r = 1%, σ = 20%, continuously compounded dividend δ = 3%,12 periods with the maturity time of one year. the expected return on the stock is µ = 10%. we will assume both a call and a put option and set the strike price of the option to be $105, the stock price was given by $100.
+Given by the following information and parameters, we designed a binomial model with 12 step trees.
+Firstly, we collected all the parameters and calculate the payoff of the option. We have considered the continuously compounded interest rate, r = 1%, a volatility σ = 20%, a continuously compounded dividend δ = 3%, 12 periods with an option maturity time of one year. The expected return on the stock is µ = 10%. We will assume both a call and a put option and set the strike price of the option to be $105, the stock price being equal to $100.
 
-1) We will model the stock returns of each period by u and d using the following equations.
+1) We will model the stock returns of each period using two factors : u and d using the following equations.
 
 u=e^(σ√h); d=e^(-σ√h)
 
-where σ is the annual volatility, and h is the length of a binomial period in years.
+where σ is the annual volatility, and h is the step/length of a binomial period in years.
 
 We input the parameter and get :
 * u=1.0594 (up-factor per step)
@@ -113,7 +113,7 @@ We can check that the product between these two factors is equal to 1.
 
 ![Screenshot](BinomialTree_Github.JPG)
 
-# Part II:  compared the result with a real option of Airbus SE
+# Part II:  Pricing a European option : Airbus SE using our models
 
 We calculate the daily return of Airbus’s stock prices, and get the annual volatility of the past 10 years of 35.22%. So we set the annual volatility of the stock to be 35%. The continuously compounded dividend of the stock is 1.88%. We choose the 10-years Treasury bond yield to be the risk-free rate, which is 1.59%.
 From the market, we can find the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022.
