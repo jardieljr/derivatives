@@ -112,6 +112,30 @@ We can check that the product between these two factors is equal to 1.
 
 ![Screenshot](BinomialTree_Github.png)
 
+Part II:  compared the result with a real option of Airbus SE
+
+We calculate the daily return of Airbus’s stock prices, and get the annual volatility of the past 10 years of 35.22%. So we set the annual volatility of the stock to be 35%. The continuously compounded dividend of the stock is 1.88%. We choose the 10-years Treasury bond yield to be the risk-free rate, which is 1.59%.
+From the market, we can find the stock price of Airbus SE is €109.78, the price(23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022.
+
+![Screenshot](Airbus_Option_Github.jpg)
+
+We input all the parameters in the model and generate the result.
+
+![Screenshot](Input_Github.jpg)
+
+The result of the binomial model is €20.3498.
+
+![Screenshot](Binomial_Pricing_Github.jpg)
+
+The result of the black & Scholes model is €19.962.
+
+![Screenshot](B&S_Pricing_Github.jpg)
+
+
+
+
+
+
 
 
 
