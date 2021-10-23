@@ -1,4 +1,4 @@
-# Derivatives
+# Derivatives - Option Pricing
 
 TSM project - M2 FiRE
 
@@ -49,6 +49,10 @@ The mathematical formulae applied for both a call and a put option and it is as 
 where
 
 ![Screenshot](Form2_Github.png)
+
+with :
+
+●	N(𝑥) is the cumulative probability function for a variable with standard normal distribution N(0,1) with a mean of 0 and a variance of 1.
 
 
 
