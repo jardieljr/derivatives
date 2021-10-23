@@ -9,7 +9,7 @@ Nabiil BUDUREEA;
 Huifen Chen;
 
 
-# Momento :
+# Momento
 
 Before digging into the principles of our group assignment, let us have a quick momento on some pertinent course materials viewed in the previous lectures. Options, in finance, are financial derivatives, that convey its owner the right but not the obligation to buy or sell the underlying asset, leaving the other counterparty of the contract with the obligation to execute if the holder decides to execute his option.
 
@@ -25,11 +25,11 @@ Since options are derivatives contracts, the movement in the price of the underl
 
 The document is structured as follows: the first part will discuss on the overview of the questions, the second part will explain the foundations of the Binomial and Black-Scholes-Merton model and a third part that will be a User Guide for the excel model.
 
-## Foundations of the Black-Scholes-Merton formula:
+## Foundations of the Black-Scholes-Merton formula
 
 The Black-Scholes is a pricing model used to determine the fair price or theoretical value for a call or a put option based on six variables such as volatility, type of option, underlying stock price, time, strike price, and the risk-free rate. The quantum of speculation is more in the case of stock market derivatives, and hence proper pricing of options eliminates the opportunity for any arbitrage (The Economics Times). The use of this model is for the determination of a European call option, leading to the fact that the latter can be exercised only at the date of expiration.
 
-## The assumptions of the Black-Scholes-Merton model:
+## The assumptions of the Black-Scholes-Merton model
 
 This option pricing model relies on a plethora of assumptions. Some of them are assumptions are the same as in financial models such as Sharpe (1964), Lintner (1965), and Mossin (1966) Capital Asset Pricing Model (CAPM) and some of them are different from the latter.
 The elementary assumptions for the Black-Scholes model to be satisfied are as follows:
@@ -71,7 +71,7 @@ The binomial option pricing model consists of an iterative approach, enabling th
 The binomial option pricing model assumes that the price of the underlying asset will move up or down by a specified amount over a period. Based on the assumption that asset prices in the future follow binomial distribution, the no-arbitrage price of options can be determined. The binomial option pricing is relatively simple in computation even if it can become tedious for the implementation of a multi-period model.
 Compared with the black and Scholes model, the binomial model is useful for American options. The model provides empirical results according to the inputs we set, and the holder has the right to exercise at any time before expiration. Another significant advantage is the multi period view, which provides the transparency of the price and option value of the underlying asset over time.
 
-## The underlying assumptions for the binomial option pricing model :
+## The underlying assumptions for the binomial option pricing model
 
 * At every point in time, two possible outcomes of the price; a move up and a move down
 * The underlying asset pays dividends
