@@ -97,9 +97,11 @@ We input the parameter and get u=1.0594, d=0.9439.
 
 4) The result of the option price and the evolution of the option price and hedging ratio at all nodes of the binomial tree:
 
+* The call option price using the binomial model is $5.1087
+* The call option price using the Black & Scholes model is $5.017
 
-
-the call option price using the binomial model is $9.5097.
+* The put option price using the binomial model is $12.0643
+* The put option price using the Black & Scholes model is $11.928
 
 
 
