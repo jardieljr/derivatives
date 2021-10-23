@@ -116,7 +116,7 @@ We can check that the product between these two factors is equal to 1.
 # Part II:  compared the result with a real option of Airbus SE
 
 We calculate the daily return of Airbus’s stock prices, and get the annual volatility of the past 10 years of 35.22%. So we set the annual volatility of the stock to be 35%. The continuously compounded dividend of the stock is 1.88%. We choose the 10-years Treasury bond yield to be the risk-free rate, which is 1.59%.
-From the market, we can find the stock price of Airbus SE is €109.78, the price(23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022.
+From the market, we can find the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022.
 
 ![Screenshot](Airbus_Option_Github.jpg)
 
@@ -128,9 +128,19 @@ The result of the binomial model is €20.3498.
 
 ![Screenshot](Binomial_Pricing_Github.jpg)
 
-The result of the black & Scholes model is €19.962.
+The result of the Black & Scholes model is €19.962.
 
 ![Screenshot](B&S_pricing_Github.jpg)
+
+## Observations
+
+Both computations of the Airbus option with both models are consistent with the trading price of the option on the market : €20.42
+
+Even if our B&S computation has proved to be more accurate and robust in practise. However, in this case, the binomial model is the most accurate one. Which exposes the utility of such a model in some circomstances.
+Furthermore, we can explain the relative uncertainty in our computations with the theoretical trading price by the inputs we used to compute the option price. As a matter of fact, the volatility and dividend yield computed are affected by sources of uncertainties such as the time frame considered to calcule such inputs. In our case, we used a large timeframe to compute the volatilty. To optimize further the B&S computation, we think that by choosing a closer timeframe with the option issuing date computing the volatility, we can enhance our option pricing accuracy.
+On the other hand, we estimate that our play on the dividend yield variable present in the inputs is very limited, this parameter optimization won't lead to significative accuracy enhancement.
+
+# Models Stability & Flexibilty observations
 
 
 
