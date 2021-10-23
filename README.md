@@ -83,7 +83,7 @@ Compared with the black and Scholes model, the binomial model is useful for Amer
 # Part I :  European option by given parameters 
 
 Given by the following information and parameters, we designed a binomial model with continuously compounded dividends by 12 step trees.
-Firstly, we collect all the parameters and calculate the payoff of the option, We have continuously compounded interest rate, r = 1%, σ = 20%, continuously compounded dividend δ = 3%,12 periods with the maturity time of one year. the expected return on the stock is µ = 10%. we assume this is a call option and set the strike price of the option to be $105, the stock price was given by $100.
+Firstly, we collect all the parameters and calculate the payoff of the option, We have continuously compounded interest rate, r = 1%, σ = 20%, continuously compounded dividend δ = 3%,12 periods with the maturity time of one year. the expected return on the stock is µ = 10%. we will assume both a call and a put option and set the strike price of the option to be $105, the stock price was given by $100.
 
 1) We will model the stock returns of each period by u and d using the following equations.
 
