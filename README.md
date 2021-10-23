@@ -52,14 +52,14 @@ where
 
 with :
 
-●	N(𝑥) is the cumulative probability function for a variable with standard normal distribution N(0,1) with a mean of 0 and a variance of 1.
-●	C and P are the prices of European call and put options respectively
-●	S0 is the underlying asset  price
-●	X is the strike price
-●	σ is the volatility
-●	r is the continuously compounded risk-free interest rate
-●	q is the continuously compounded dividend yield 
-●	t is the time to maturity
+* N(𝑥) is the cumulative probability function for a variable with standard normal distribution N(0,1) with a mean of 0 and a variance of 1.
+* C and P are the prices of European call and put options respectively
+* S0 is the underlying asset  price
+* X is the strike price
+* σ is the volatility
+* r is the continuously compounded risk-free interest rate
+* q is the continuously compounded dividend yield 
+* t is the time to maturity
 
 Foundations of the Binomial Option Pricing Model
 
@@ -72,11 +72,11 @@ Compared with the black and Scholes model, the binomial model is useful for Amer
 
 The underlying assumptions for the binomial option pricing model:
 
-●	At every point in time, two possible outcomes of the price; a move up and a move down
-●	The underlying asset pays dividends
-●	The risk-free interest rate (discount factor) is continuously compounded throughout the period;
-●	The market is frictionless, and there are no transaction costs and no taxes
-●	Investors are risk-neutral, indifferent to risk
+* At every point in time, two possible outcomes of the price; a move up and a move down
+* The underlying asset pays dividends
+* The risk-free interest rate (discount factor) is continuously compounded throughout the period;
+* The market is frictionless, and there are no transaction costs and no taxes
+* Investors are risk-neutral, indifferent to risk
 
 
 Part I :  European option by given parameters 
