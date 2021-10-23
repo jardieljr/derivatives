@@ -44,7 +44,11 @@ The elementary assumptions for the Black-Scholes model to be satisfied are as fo
 Considering the fact that these assumptions are satisfied, the Black-Scholes formula is obtained.
 The mathematical formulae applied for both a call and a put option and it is as follows:
 
-![Screenshot](screenshot.png)
+![Screenshot](Form2_Github.png)
+
+where
+
+![Screenshot](Form2_Github.png)
 
 
 
