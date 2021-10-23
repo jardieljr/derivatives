@@ -3,10 +3,10 @@
 TSM project - M2 FiRE
 
 Authors :
-Ilyès BOUSSOUF
-Jardiel DA SILVA ARAUJO JUNIOR
-Nabiil BUDUREEA
-Huifen Chen
+Ilyès BOUSSOUF;
+Jardiel DA SILVA ARAUJO JUNIOR;
+Nabiil BUDUREEA;
+Huifen Chen;
 
 
 Momento :
