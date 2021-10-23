@@ -6,7 +6,7 @@ Authors :
 Ilyès BOUSSOUF;
 Jardiel DA SILVA ARAUJO JUNIOR;
 Nabiil BUDUREEA;
-Huifen Chen;
+Huifen Chen
 
 
 # Momento
