@@ -84,10 +84,17 @@ Part I :  European option by given parameters
 Given by the following information and parameters, we designed a binomial model with continuously compounded dividends by 12 step trees.
 Firstly, we collect all the parameters and calculate the payoff of the option, We have continuously compounded interest rate, r = 1%, σ = 20%, continuously compounded dividend δ = 3%,12 periods with the maturity time of one year. the expected return on the stock is µ = 10%. we assume this is a call option and set the strike price of the option to be $105, the stock price was given by $100.
 
-1) We will model the stock returns of each period by u and d using the equations.
+1) We will model the stock returns of each period by u and d using the following equations.
 
-u=e^(σ√h), d=e^(-σ√h),where σ is the annual volatility, and h is the length of a binomial period in years.
-We input the parameter and get u=1.0594, d=0.9439.
+u=e^(σ√h); d=e^(-σ√h)
+
+where σ is the annual volatility, and h is the length of a binomial period in years.
+
+We input the parameter and get :
+* u=1.0594 (up-factor per step)
+* d=0.9439 (down-factor per step)
+
+We can check that the product between these two factors is equal to 1.
 
 2) The risk-neutral probability in one period is p*=(e^rh -d)/(u-d), where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factors per period.  We input the parameter and get p*=0.48.
 
