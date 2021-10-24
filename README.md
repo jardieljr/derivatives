@@ -48,7 +48,7 @@ Considering the fact that these assumptions are satisfied, the Black-Scholes for
 
 The mathematical formulae can be applied for both a call and a put option and is as follows:
 
-![Screenshot](Form1_Github.png)
+![Screenshot](Form1_Github.pngtyle=centerme)
 
 where
 
