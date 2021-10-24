@@ -122,7 +122,7 @@ The hedging ratio at a node of the binomial tree can be calculated using the fol
 
 ![Screenshot](images/HedgeRatio_Github.jpg)
 
-# Part II:  Pricing a European option : Airbus SE using our models
+# Part II:  Pricing an European option : Airbus SE using our models
 
 We calculate the daily return of Airbus’s stock prices, and get the annual volatility of the past 10 years of 35.22%. So we set the annual volatility of the stock to be 35%.
 To compute this annual volatility, we compute the daily returns of the underlying stock. Using this distribution, we calculate its standard deviation and multiply it by square root of the number of traing days per year for this stock.
