@@ -180,7 +180,7 @@ Hence, to price an option with a matuity of few weeks or numerous years, we will
 
 This can be due to the fact that the B&S model relies its compuatation on a normal distribution, continuously whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
 
-![Screenshot](images/Comparison_Github.jpeg)
+![Screenshot](images/Comparison_GIthub.jpeg)
 
 On the other hand, for options with 1 year of maturirty, regarding our observations performing both models on several underlying assets, we will prefer the Binomial Model accuracy, regularly closer to the real trading price.
 
