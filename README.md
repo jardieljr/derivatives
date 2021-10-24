@@ -162,13 +162,13 @@ On the other hand, we estimate that our play on the dividend yield variable pres
 
 Our model has proven to be robust and accurate in all the configurations we set it up for the option pricing. No deviations from the theoretical price (calculated using B&S pricing calculators online) have been noticed. Plus, by computing the B&S model using both an Excel & VBA approach allow us to enhance further our model reliability. As a matter of fact, the pricing performed by these two approaches (Excel & VBA) give always the same result at 10^-3.
 
-Regarding now the flexibility of the model, we can easily and quickly switch from inputs to pricing computations using our model. By trial and errors using mulitple inputs, we find that this method is the most reliable one. This observation is consistent with the fact that B&S is most commonly used in the industry to perform option pricing.
+Regarding now the flexibility of the model, we can easily and quickly switch from inputs to pricing computations using our model. By trials and errors using multiple inputs, we find that this method is the most reliable one. This observation is consistent with the fact that B&S is most commonly used in the industry to perform option pricing.
 
 However, some observations made the Binomial Model relevant and interesting in some configurations.
 
 ## Binomial Model
 
-As a matter of fact, we noticed that for the Airbus option price, the binomial model proved to be more accurate than the B&S model, the result was closer to the real trading price.
+As a matter of fact, we noticed that for the Airbus option pricing, the binomial model proved to be more accurate than the B&S model with a maturity time of 1 year, the result was closer to the real trading price.
 We can notice an enhanced accuracy of this model for option maturity times close to 1 year, which was the case with our Airbus option pricing. This could be explained by the binomial tree decomposition in 12 periods in adequation with the matuirty time, which allowed to increase our digits decomposition and expand our scalability whereas the linear model of the B&S strategy only enabled a capped accuracy.
 
 Both the binomial model and the Black-Scholes formula are based on the risk-neutral free policy, the Black-Scholes formula is a limiting case of the binomial formula for the price of a European option. In other words, if the binomial model can divide the time into infinite periods, they are the same. But the derivation of the Black-Scholes formula makes a assumption of continuous and continuously compounded returns on the stock are normally distributed. For the binomial, it’s discrete which allows us to exercise the option at any point of the periods. So binomial model can work effectively with a complex option such as paying discrete dividends, American options which may exercise the option before the expiration. The Black-Scholes formula is more suitable for the European option which doesn’t allow to exercise in advance.
@@ -178,11 +178,13 @@ However, we advise the user to always keep a critical eye on this binomial metho
 Hence, to price an option with a matuity of few weeks or numerous years, we will privilege the B&S approach which will enable reliability and robustness.
 
 
-This can be due to the fact that the B&S model relies its compuatation on a normal distribution, continuously whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
+This can be due to the fact that the B&S model relies its computation on a normal distribution, continuously whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
 
 ![Screenshot](images/Comparison_GIthub.jpeg)
 
-On the other hand, for options with 1 year of maturirty, regarding our observations performing both models on several underlying assets, we will prefer the Binomial Model accuracy, regularly closer to the real trading price.
+On the other hand, for options with 1 year of maturity, regarding our observations performing both models on several underlying assets, we will prefer the Binomial Model accuracy, regularly closer to the real trading price. Deviating from this maturity of 1 year, we will always choose the B&S appraoch.
+
+
 
 
 
