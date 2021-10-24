@@ -52,7 +52,7 @@ The mathematical formulae can be applied for both a call and a put option and is
 
 where
 
-![Screenshot](Form2_Github.png.html)
+![Screenshot](images/Form2_Github.png.html)
 
 with :
 
