@@ -114,7 +114,7 @@ We can check that the product between these two factors is equal to 1.
 * The put option price using the binomial model is $12.0643
 * The put option price using the Black & Scholes model is $11.928
 
-![Screenshot](images/BinomialTree_Github.JPG)
+![Screenshot](images/BinomialTree_Github.jpg)
 
 In parallel to the share price evolution that can be observed on the heat gradient, we computed the hedging ratio evolution at all nodes of the binomial tree.
 
