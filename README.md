@@ -100,7 +100,7 @@ We input the parameter and get :
 
 We can check that the product between these two factors is equal to 1.
 
-2) The risk-neutral probability in one period is p*=(e^(rh) -d)/(u-d), where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factors per period.  We input the parameter and get p*=0.48.
+2) The risk-neutral probability in one period is p*=(e^(rh) -d)/(u-d), where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factors per period.  We input the parameter and get p*=0.49.
 
 3) The payoff of the call option at the maturity:
 
