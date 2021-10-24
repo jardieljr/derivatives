@@ -136,7 +136,7 @@ From the market, we can find that the stock price of Airbus SE is €109.78, the
 
 *Source : Bourse Direct*
 
-Using our Market data computations (see Excel file titled Airbus - Market Data), we input all the parameters in the model and generate the result.
+Using our Market data computations (see Excel file titled Airbus - Market Data), we input all the parameters in the model and generate the results.
 
 ![Screenshot](images/Input_Github.jpg)
 
