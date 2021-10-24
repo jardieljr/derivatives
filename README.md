@@ -77,7 +77,7 @@ Compared with the Black and Scholes model, the binomial model is useful for Amer
 ## The underlying assumptions for the binomial option pricing model
 
 * At every point in time, two possible outcomes of the price; a move up and a move down
-* The underlying asset can pay dividends or not
+* The underlying asset can pay dividends or not (we chose to discount the dividends such that our final option pricing is consistent with our B&S computations and as close as possible with the real trading price of the option)
 * The risk-free interest rate (discount factor) is continuously compounded throughout the period;
 * The market is frictionless, and there are no transaction costs and no taxes
 * Investors are risk-neutral, indifferent to risk
