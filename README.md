@@ -42,11 +42,11 @@ The elementary assumptions for the Black-Scholes model to be satisfied are as fo
 * No riskless arbitrage opportunities
 * Continuous trading in assets throughout time
 * The price of the underlying asset has a log-normal distribution and evolves with continuous sample paths according to the Brownian motion process
-* More is preferred to less by investors and they agree on the function of underlying asset’s variance σ2, which is considered to be constant
+* More is preferred to less by investors and they agree on the function of underlying asset’s variance σ^2, which is considered to be constant
 
 Considering the fact that these assumptions are satisfied, the Black-Scholes formula is obtained.
 
-The mathematical formulae can be applied for both a call and a put option and is as follows:
+The mathematical formula can be applied for both a call and a put option and is as follows:
 
 ![Screenshot](images/Form1_Github.png)
 
@@ -58,7 +58,7 @@ with :
 
 * N(𝑥) is the cumulative probability function for a variable with standard normal distribution N(0,1) with a mean of 0 and a variance of 1.
 * C and P are the prices of European call and put options respectively
-* S0 is the underlying asset  price
+* S_0 is the underlying asset price
 * X is the strike price
 * σ is the volatility
 * r is the continuously compounded risk-free interest rate
@@ -67,7 +67,7 @@ with :
 
 # Foundations of the Binomial Option Pricing Model
 
-The binomial option pricing model consists of an iterative approach, enabling the specification of nodes, during the time period between the valuation date and the option’s expiration date. Each iteration is segmented between two possible outcomes, a move up and move down that takes the shape of a binomial tree. 
+The binomial option pricing model consists in an iterative approach, enabling the specification of nodes, during the time period between the valuation date and the option’s expiration date. Each iteration is segmented between two possible outcomes, a move up and move down that takes the shape of a binomial tree. 
 
 ## The assumptions of the Binomial Option Pricing Model
 
@@ -76,7 +76,7 @@ Compared with the Black and Scholes model, the binomial model is useful for Amer
 
 ## The underlying assumptions for the binomial option pricing model
 
-* At every point in time, two possible outcomes of the price; a move up and a move down
+* At every point in time, two possible outcomes of the price : a move up and a move down
 * The underlying asset can pay dividends or not (we chose to discount the dividends such that our final option pricing is consistent with our B&S computations and as close as possible with the real trading price of the option)
 * The risk-free interest rate (discount factor) is continuously compounded throughout the period;
 * The market is frictionless, and there are no transaction costs and no taxes
