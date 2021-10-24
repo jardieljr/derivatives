@@ -184,6 +184,10 @@ This can be due to the fact that the B&S model relies its computation on a norma
 
 On the other hand, for options with 1 year of maturity, regarding our observations performing both models on several underlying assets, we will prefer the Binomial Model accuracy, regularly closer to the real trading price. Deviating from this maturity of 1 year, we will always choose the B&S appraoch.
 
+## Extra
+
+In order to optimize our model flexibility, we implemented a Power Query request that enables to directly access the market data in real time. Doing it, we can always have the volatility of the underlying asset up-to-date. However, to enhance further this process flexibility we could think of getting the historical dividends as well. That way, both volatility and dividends would be available to the user in real-time and for all the listed stocks on financial markets (available on the **Yahoo Finance** website).
+
 
 
 
