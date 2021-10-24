@@ -144,7 +144,7 @@ The result using our binomial model is €20.3498.
 
 ![Screenshot](images/Binomial_Pricing_Github.jpg)
 
-The result using our Black & Scholes model is €19.962.
+The result using our Black & Scholes model is €19,942.
 
 ![Screenshot](images/B&S_pricing_Github.jpg)
 
