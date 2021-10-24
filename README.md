@@ -1,6 +1,7 @@
 # Derivatives - Option Pricing
 
 ## TSM project - M2 FiRE
+![Screenshot](TSM_logo.png)
 
 Authors :
 Ilyès BOUSSOUF;
