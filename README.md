@@ -120,7 +120,7 @@ In parallel to the share price evolution that can be observed on the heat gradie
 
 The hedging ratio at a node of the binomial tree can be calculated using the following formula :
 
-![Screenshot](images/HedgeRatio_Github.jpeg)
+![Screenshot](images/HedgeRatio_Github.jpg)
 
 # Part II:  Pricing a European option : Airbus SE using our models
 
