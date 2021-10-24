@@ -35,8 +35,8 @@ The Black-Scholes is a pricing model used to determine the fair price or theoret
 ## The assumptions of the Black-Scholes model
 
 This option pricing model relies on a plethora of assumptions. Some of these are assumptions are the same as in financial models such as Sharpe (1964), Lintner (1965), and Mossin (1966) Capital Asset Pricing Model (CAPM).
-The elementary assumptions for the Black-Scholes model to be satisfied are as follows:
-* The fact that there are no restrictions, taxes, and limitations on security tradings, these security markets are frictionless. 
+The elementary assumptions for the Black-Scholes model to be satisfied are as follows :
+* The fact that there are no restrictions, taxes, and limitations on security tradings, these security markets are frictionless 
 * During the lifetime of the option, there are no additional payments from the underlying assets
 * The risk-free interest rate is constant for the whole lifespan of the option, thus investors can borrow or lend at that same rate
 * No riskless arbitrage opportunities
