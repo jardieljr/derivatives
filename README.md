@@ -128,9 +128,9 @@ We calculate the daily return of Airbus’s stock prices, and get the annual vol
 To compute this annual volatility, we compute the daily returns of the underlying stock. Using this distribution, we calculate its standard deviation and multiply it by square root of the number of trading days per year for this stock.
 
 
-The continuously compounded dividend of the stock is 1.88%. We choose the 10-years Treasury bond yield to be the risk-free rate, which is 1.59%. This can be found easily on the internet on open-source financial platforms such as Yahoo Finance.
+The continuously compounded dividend of the stock is 1.88%. We choose the 10-years Treasury bond yield to be the risk-free rate, which is 1.59%. This can be found easily on the internet on open-source financial platforms such as *Yahoo Finance*.
 
-From the market, we can find that the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022. We found these quotes on Bourse Direct, an open-source french financial platform.
+From the market, we can find that the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022. We found these quotes on *Bourse Direct*, an open-source french financial platform.
 
 ![Screenshot](images/Airbus_Option_Github.jpg)
 
