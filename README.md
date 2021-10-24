@@ -41,7 +41,7 @@ The elementary assumptions for the Black-Scholes model to be satisfied are as fo
 * The risk-free interest rate is constant for the whole lifespan of the option, thus investors can borrow or lend at that same rate
 * No riskless arbitrage opportunities
 * Continuous trading in assets throughout time
-* The price of the underlying asset has a lognormal distribution and evolves with continuous sample paths according to the Brownian motion process
+* The price of the underlying asset has a log-normal distribution and evolves with continuous sample paths according to the Brownian motion process
 * More is preferred to less by investors and they agree on the function of underlying asset’s variance σ2, which is considered to be constant
 
 Considering the fact that these assumptions are satisfied, the Black-Scholes formula is obtained.
@@ -144,7 +144,7 @@ The result using our binomial model is €20.3498.
 
 ![Screenshot](images/Binomial_Pricing_Github.jpg)
 
-The result using our Black & Scholes model is €19,942.
+The result using our Black & Scholes model is €19.962.
 
 ![Screenshot](images/B&S_pricing_Github.jpg)
 
