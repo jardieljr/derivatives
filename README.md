@@ -10,6 +10,8 @@ Nabiil BUDUREEA;
 Huifen Chen
 
 
+The Excel file to be used comprising our option pricing models can be found in the project repository and is titled 
+
 # Momento
 
 Before digging into the principles of our group assignment, let us have a quick momento on some pertinent course materials viewed in the previous lectures. Options, in finance, are financial derivatives, that convey its owner the right but not the obligation to buy or sell the underlying asset, leaving the other counterparty of the contract with the obligation to execute if the holder decides to execute his option.
