@@ -10,7 +10,7 @@ Nabiil BUDUREEA;
 Huifen Chen
 
 
-**The Excel file to be used comprising our option pricing models can be found in the project repository and is titled *Derivatives_Project.xlsm***
+**The Excel file to be used comprising our option pricing models can be found in the project repository and is titled *Derivatives_Project_File.xlsm***
 
 # Momento
 
