@@ -152,7 +152,7 @@ The result using our Black & Scholes model is €19.962.
 
 Both computations of the Airbus option with both models are consistent with the trading price of the option on the market : €20.42
 
-Even if our B&S computation has proved to be more accurate and robust in practise. However, in this case, the binomial model is the most accurate one. Which exposes the utility of such a model in some circomstances.
+Even if our B&S computation has proved to be more accurate and robust in practice. However, in this case, the binomial model is the most accurate one. Which exposes the utility of such a model in some circomstances.
 Furthermore, we can explain the slight relative uncertainty in our computations with the theoretical trading price by the inputs we used to compute the option price that are certainly not computed the same way as the analysts computed them for the quote pricing. As a matter of fact, the volatility and dividend yield computed are affected by sources of uncertainties such as the time frame considered to calcule such inputs. In our case, we used a large timeframe to compute the volatilty. To optimize further the B&S computation, we think that by choosing a closer timeframe with the option issuing date computing the volatility, we can enhance our option pricing accuracy.
 On the other hand, we estimate that our play on the dividend yield variable present in the inputs is very limited, this parameter optimization won't lead to significative accuracy enhancement.
 
