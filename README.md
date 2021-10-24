@@ -114,16 +114,27 @@ We can check that the product between these two factors is equal to 1.
 
 ![Screenshot](BinomialTree_Github.JPG)
 
+In parallel to the share price evolution that can be observed on the heat gradient, we computed the hedging ratio evolution at all nodes of the binomial tree.
+
+The hedging ratio at a node of the binomial tree can be calculated using the following formula :
+
+![Screenshot](HedgeRatio_Github.jpeg)
+
 # Part II:  Pricing a European option : Airbus SE using our models
 
-We calculate the daily return of Airbus’s stock prices, and get the annual volatility of the past 10 years of 35.22%. So we set the annual volatility of the stock to be 35%. The continuously compounded dividend of the stock is 1.88%. We choose the 10-years Treasury bond yield to be the risk-free rate, which is 1.59%.
-From the market, we can find the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022.
+We calculate the daily return of Airbus’s stock prices, and get the annual volatility of the past 10 years of 35.22%. So we set the annual volatility of the stock to be 35%.
+To compute this annual volatility, we compute the daily returns of the underlying stock. Using this distribution, we calculate its standard deviation and multiply it by square root of the number of traing days per year for this stock.
+
+
+The continuously compounded dividend of the stock is 1.88%. We choose the 10-years Treasury bond yield to be the risk-free rate, which is 1.59%. This can be found easily on the internet on open-source financial platform such as Yahoo Finance.
+
+From the market, we can find the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022. We found these quotes on Bourse Direct, an open-source french financial platform.
 
 ![Screenshot](Airbus_Option_Github.jpg)
 
 *Source : Bourse Direct*
 
-We input all the parameters in the model and generate the result.
+Using our Market data computations (see Excel file titled Airbus - Market Data), we input all the parameters in the model and generate the result.
 
 ![Screenshot](Input_Github.jpg)
 
