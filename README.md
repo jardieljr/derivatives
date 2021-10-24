@@ -1,7 +1,7 @@
 # Derivatives - Option Pricing
 
 ## TSM project - M2 FiRE
-![Screenshot](TSM_Logo.png)
+![Screenshot](images/TSM_Logo.png)
 
 Authors :
 Ilyès BOUSSOUF;
@@ -48,11 +48,11 @@ Considering the fact that these assumptions are satisfied, the Black-Scholes for
 
 The mathematical formulae can be applied for both a call and a put option and is as follows:
 
-![Screenshot](Form1_Github.png)
+![Screenshot](images/Form1_Github.png)
 
 where
 
-![Screenshot](images/Form2_Github.png.html)
+![Screenshot](images/Form2_Github.png)
 
 with :
 
@@ -104,7 +104,7 @@ We can check that the product between these two factors is equal to 1.
 
 3) The payoff of the call option at the maturity:
 
-![Screenshot](PayOff_Call_Ex1_Github.png)
+![Screenshot](images/PayOff_Call_Ex1_Github.png)
 
 4) The result of the option price and the evolution of the option price and hedging ratio at all nodes of the binomial tree:
 
@@ -114,13 +114,13 @@ We can check that the product between these two factors is equal to 1.
 * The put option price using the binomial model is $12.0643
 * The put option price using the Black & Scholes model is $11.928
 
-![Screenshot](BinomialTree_Github.JPG)
+![Screenshot](images/BinomialTree_Github.JPG)
 
 In parallel to the share price evolution that can be observed on the heat gradient, we computed the hedging ratio evolution at all nodes of the binomial tree.
 
 The hedging ratio at a node of the binomial tree can be calculated using the following formula :
 
-![Screenshot](HedgeRatio_Github.jpeg)
+![Screenshot](images/HedgeRatio_Github.jpeg)
 
 # Part II:  Pricing a European option : Airbus SE using our models
 
@@ -132,21 +132,21 @@ The continuously compounded dividend of the stock is 1.88%. We choose the 10-yea
 
 From the market, we can find the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with the strike price of €100 is to be €20.42, the maturity time is 16/12/2022. We found these quotes on Bourse Direct, an open-source french financial platform.
 
-![Screenshot](Airbus_Option_Github.jpg)
+![Screenshot](images/Airbus_Option_Github.jpg)
 
 *Source : Bourse Direct*
 
 Using our Market data computations (see Excel file titled Airbus - Market Data), we input all the parameters in the model and generate the result.
 
-![Screenshot](Input_Github.jpg)
+![Screenshot](images/Input_Github.jpg)
 
 The result using our binomial model is €20.3498.
 
-![Screenshot](Binomial_Pricing_Github.jpg)
+![Screenshot](images/Binomial_Pricing_Github.jpg)
 
 The result using our Black & Scholes model is €19.962.
 
-![Screenshot](B&S_pricing_Github.jpg)
+![Screenshot](images/B&S_pricing_Github.jpg)
 
 ## Observations
 
