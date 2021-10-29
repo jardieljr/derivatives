@@ -48,11 +48,11 @@ Considering the fact that these assumptions are satisfied, the Black-Scholes for
 
 The mathematical formula can be applied for both a call and a put option and is as follows:
 
-![Screenshot](images/Form1_Github.png)
+![Screenshot](assignment_1/images/Form1_Github.png)
 
 where
 
-![Screenshot](images/Form2_Github.png)
+![Screenshot](assignment_1/images/Form2_Github.png)
 
 with :
 
@@ -104,7 +104,7 @@ We can check that the product between these two factors is equal to 1.
 
 3) The payoff of the call option at the maturity:
 
-![Screenshot](images/PayOff_Call_Ex1_Github.png)
+![Screenshot](assignment_1/images/PayOff_Call_Ex1_Github.png)
 
 4) The result of the option price and the evolution of the option price and hedging ratio at all nodes of the binomial tree:
 
@@ -114,13 +114,13 @@ We can check that the product between these two factors is equal to 1.
 * The put option price using the binomial model is $12.0643
 * The put option price using the Black & Scholes model is $11.928
 
-![Screenshot](images/BinomialTree_Github.jpg)
+![Screenshot](assignment_1/images/BinomialTree_Github.jpg)
 
 In parallel to the share price evolution that can be observed on the heat gradient, we computed the hedging ratio evolution at all nodes of the binomial tree.
 
 The hedging ratio at a node of the binomial tree can be calculated using the following formula :
 
-![Screenshot](images/HedgeRatio_Github.jpg)
+![Screenshot](assignment_1/images/HedgeRatio_Github.jpg)
 
 # Part II:  Pricing an European option : Airbus SE using our models
 
@@ -132,21 +132,21 @@ The continuously compounded dividend of the stock is 1.88%. We choose the 10-yea
 
 From the market, we can find that the stock price of Airbus SE is €109.78, the price (23/10/2021) of a call option of Airbus SE with a strike price of €100 is to be €20.42, the maturity time is 16/12/2022. We found these quotes on *Bourse Direct*, an open-source french financial platform.
 
-![Screenshot](images/Airbus_Option_Github.jpg)
+![Screenshot](assignment_1/images/Airbus_Option_Github.jpg)
 
 *Source : Bourse Direct*
 
 Using our Market data computations (see Excel file titled Airbus - Market Data), we input all the parameters in the model and generate the results.
 
-![Screenshot](images/Input_Github.jpg)
+![Screenshot](assignment_1/images/Input_Github.jpg)
 
 The result using our binomial model is €20.3498.
 
-![Screenshot](images/Binomial_Pricing_Github.jpg)
+![Screenshot](assignment_1/images/Binomial_Pricing_Github.jpg)
 
 The result using our Black & Scholes model is €19.962.
 
-![Screenshot](images/B&S_pricing_Github.jpg)
+![Screenshot](assignment_1/images/B&S_pricing_Github.jpg)
 
 ## Observations
 
@@ -180,7 +180,7 @@ Hence, to price an option with a maturity of few weeks or numerous years, we wil
 
 This can be due to the fact that the B&S model relies its computation on a normal distribution, continuously whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
 
-![Screenshot](images/Comparison_GIthub.jpeg)
+![Screenshot](assignment_1/images/Comparison_GIthub.jpeg)
 
 On the other hand, for options with 1 year of maturity, regarding our observations performing both models on several underlying assets, we will prefer the Binomial Model accuracy, regularly closer to the real trading price. Deviating from this maturity of 1 year, we will always choose the B&S appraoch.
 
