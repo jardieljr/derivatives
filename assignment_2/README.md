@@ -20,6 +20,12 @@ A plethora of method exist to price options, for instance, as previously studied
 
 In this vein, the objective of this assignment is based on the applications to the pricing of an American or Exotic option, using the Monte Carlo Simulations by the means of Excel and VBA. For our case, our focal point will be laid on American options. 
 
+The document is structured as follows: the first part will explain the foundations of the monte Carlo simulation method, the second part will focus on pricing an Asian option by Binomial model and the third part will discuss pricing an American option in different methods like binomial model or monte Carlo simulation based on Black-Scholes-Merton model. 
+
+# The foundation of Monte Carlo Simulation method
+
+
+
 
 
 # Part I :  Asian option by given parameters 
