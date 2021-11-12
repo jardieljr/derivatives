@@ -1,4 +1,4 @@
-# Financial Derivatives - group assginment 2-Option Pricing american or exotic option using Monte Carlo Simulations
+# Financial Derivatives - group assginment 2-Option Pricing an American or exotic option 
 
 ## TSM project - M2 FiRE
 
