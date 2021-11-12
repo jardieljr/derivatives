@@ -26,13 +26,20 @@ In this part, we designed a binomial model by VBA with continuously compounded d
 
 Asian option is one of the exotic option which based on the average price over some period of time, so it is an example of a path-dependent option. Normally, asian options are worth less than other equivalent ordinary options due to the less volatitly of the averaged price of the underlying asset.
 
-The given parameters are following:
+֍The given parameters are following:
+
 r = 1% (risk-free rate, continuously compounded)
+
 σ = 20%(volitality)
+
 δ = 3% (continuously compounded)
+
 µ = 10% (expected return)
+
 T= 1 month
+
 n=30 (each period 1 day)
+
 S0=$100
 
 1)considering deviation of paying compounded dividend, we will model the stock returns of each period by u(up-factor per step) and d (down-factor per step) using the equations.
