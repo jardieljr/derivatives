@@ -1,6 +1,7 @@
 # Financial Derivatives - group assginment 2-Option Pricing an American or exotic option 
 
 ## TSM project - M2 FiRE
+![Screenshot](Images/TSM_Logo.png)
 
 
 Authors :
@@ -43,20 +44,21 @@ n=30 (each period 1 day)
 S0=$100
 
 1)considering deviation of paying compounded dividend, we will model the stock returns of each period by u(up-factor per step) and d (down-factor per step) using the equations.
-  
-  
+
+![formula](Images/ud-factor.png)    
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, σ is the annual volatility, and h is the length of a binomial period in years.
 
-We input the parameter and get u=xxxxx, d= xxxxx.
+We input the parameter and get u=1.1972, d=0.8025.
 
 2)The risk-neutral probability fumula in one period is
- 
- 
+
+![formula](Images/risk-nprob.png)    
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factor per period.  
 
-We input the parameter and get p*=xxxxx.
+We input the parameter and get p*=0.5081.
 
 3)According to the given formula, we use the arithmetic average of realized stock prices as the strike price on day K.
+![formula](Images/CT-asian.png)
 
 then the payoff of the call option:
 
@@ -68,6 +70,7 @@ xxxxx xxxxx
 
 4)the heding ratio formula:
 
+![formula](Images/Hedging-ratio.png)
 
 The option price and hedging ratio at all nodes of the binomial tree:
 
