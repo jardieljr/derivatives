@@ -87,12 +87,18 @@ We get the dividend payments of XXX for the past 5 years, and calculate both the
 
 we choose SOFR monthly rate to be the risk free rate.
 
-the main characteristics for the option 
+֍the main characteristics for the option 
+
 Return µ =xxxx
+
 Volitality σ =√252* daily volitality
+
 continuously compounded dividend δ = xxxx
+
 r = xx (risk-free rate, SOFR 3 MONTH)
+
 T=  xx days
+
 N=  xx (each period 1 day)
 
 3)result price of american option using binomial model
