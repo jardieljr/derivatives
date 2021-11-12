@@ -22,7 +22,8 @@ In this vein, the objective of this assignment is based on the applications to t
 
 The document is structured as follows: the first part will explain the foundations of the monte Carlo simulation method, the second part will focus on pricing an Asian option by Binomial model and the third part will discuss pricing an American option in different methods like binomial model or monte Carlo simulation based on Black-Scholes-Merton model. 
 
-# The foundation of Monte Carlo Simulation method
+# Foundation of Monte Carlo Simulation method on pricing options
+
 
 
 
