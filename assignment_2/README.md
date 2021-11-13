@@ -23,6 +23,26 @@ In this vein, the objective of this assignment is based on the applications to t
 The document is structured as follows: the first part will explain the foundations of the monte Carlo simulation method, the second part will focus on pricing an Asian option by Binomial model and the third part will discuss pricing an American option in different methods like binomial model or monte Carlo simulation based on Black-Scholes-Merton model. 
 
 # Foundation of Monte Carlo Simulation method on pricing options
+Monte Carlo simulation is a random simulation calculation approach based on probability statistics and random sampling. According to the reference book(derivatives market by Robert L.Mcdonald), Monte Carlo valuation on options depends critically on risk-neutral valuation. It is performed using the risk-neutral distribution, where we assume that assets earn the risk-free rate on average and then discount the expected payoff using the risk-free rate. In monte Carlo valuation, we perform a calculation similar to that in this equation:
+![formula](Images/MCS-formula.png)
+
+where ST is n randomly drawn time T stock prices, payoff V(ST,T), the time-0 price, V(S0,0).
+
+The pros and cons of Monte Carlo valuation are as follows:
+* It is very suitable for the high-dimensional option, which is determined by its error convergence rate characteristics. In the case of low dimension, its speed is slower than Traditional numerical methods such as the binomial tree method and finite difference method.
+
+* The Monte Carlo method can price many options, especially path-dependent options. If the simulation process is slightly modified, it can be efficiently priced without too much mathematical derivation.
+
+*	Numerous simulations can get more accurate results. Many empirical studies regarding the Monte Carlo estimates are valid because of its thousands of simulations and then test the other results as a benchmark.
+
+*	The development of computer technology strongly supports the Monte Carlo method. Many software has inside programs to generate random variables, and the high-quality hardware dramatically reduces the calculation time when applying the Monte Carlo method.
+
+* One of the disadvantages of the Monte Carlo method is that it is not suitable to price an American option that can be exercised in advance. 
+
+*	The least-square Monte Carlo simulation method proposed by Longstaff \ Schwartz is a widely used standard method in pricing American options by the Monte Carlo valuation. 
+
+
+
 
 
 
@@ -34,37 +54,37 @@ In this part, we designed a binomial model by VBA with continuously compounded d
 
 Asian option is one of the exotic option which based on the average price over some period of time, so it is an example of a path-dependent option. Normally, asian options are worth less than other equivalent ordinary options due to the less volatitly of the averaged price of the underlying asset.
 
-֍The given parameters are following:
+The given parameters are following:
 
-r = 1% (risk-free rate, continuously compounded)
+* r = 1% (risk-free rate, continuously compounded)
 
-σ = 20%(volitality)
+* σ = 20%(volitality)
 
-δ = 3% (continuously compounded)
+* δ = 3% (continuously compounded)
 
-µ = 10% (expected return)
+* µ = 10% (expected return)
 
-T= 1 month
+* T= 1 month
 
-n=30 (each period 1 day)
+* n=30 (each period 1 day)
 
-S0=$100
+* S0=$100
 
-1)considering deviation of paying compounded dividend, we will model the stock returns of each period by u(up-factor per step) and d (down-factor per step) using the equations.
+1) considering deviation of paying compounded dividend, we will model the stock returns of each period by u(up-factor per step) and d (down-factor per step) using the equations.
 
 ![formula](Images/ud-factor.png)    
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, σ is the annual volatility, and h is the length of a binomial period in years.
 
 We input the parameter and get u=1.1972, d=0.8025.
 
-2)The risk-neutral probability fumula in one period is
+2) The risk-neutral probability fumula in one period is
 
 ![formula](Images/risk-nprob.png)    
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factor per period.  
 
 We input the parameter and get p*=0.5081.
 
-3)According to the given formula, we use the arithmetic average of realized stock prices as the strike price on day K.
+3) According to the given formula, we use the arithmetic average of realized stock prices as the strike price on day K.
 ![formula](Images/CT-asian.png)
 
 then the payoff of the call option:
@@ -75,7 +95,7 @@ The call price will be:
 
 xxxxx xxxxx
 
-4)the heding ratio formula:
+4) the heding ratio formula:
 
 ![formula](Images/Hedging-ratio.png)
 
@@ -85,11 +105,11 @@ The option price and hedging ratio at all nodes of the binomial tree:
 In this part, we designed a VBA model to price an American option using binomial model and 
 Monte carlo simulation(short for MCS) based on a continuous stochastic process(geometric brownian motion as in the Black-Merton-Scholes model)
 
-1)The market price of the target asset ( apple, AAPL )is following:
+1) The market price of the target asset ( apple, AAPL )is following:
 Stock price =$xxx, Strike price=$xxx,quoted call price=$xxx
 (K,T)=(xx,xx)  Matrurity time= 30 days
 
-2)data collecation and computation of the characteristics of the stock
+2) data collecation and computation of the characteristics of the stock
 
 We calculate the daily return of XXX stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility XXX. So we set the annual volatility of the stock σ = XXX.
 
@@ -111,16 +131,16 @@ T=  xx days
 
 N=  xx (each period 1 day)
 
-3)result price of american option using binomial model
+3) result price of american option using binomial model
 
 
 
-4)result price of american option using Monte Carlo Simulation based on Black-Merton-Scholes model
+4) result price of american option using Monte Carlo Simulation based on Black-Merton-Scholes model
 
 
 
 
-5)Conclusion and Observations
+5) Conclusion and Observations
 
 
 
