@@ -3,8 +3,8 @@ import asian_option_pricing as asp
 
 #Open a new excel
 
-book = ws.Workbook('../Derivatives_Project_2.xlsm')
-
+app = xw.App()
+app.books['../Derivatives_Project_2.xlsm']
 sheet = book.sheets['Current Market Data']
 
 K= sheet['D5'].value
