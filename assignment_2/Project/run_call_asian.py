@@ -1,5 +1,5 @@
 import xlwings as ws
-import asian_option_pricing
+import asian_option_pricing as asp
 
 #Open a new excel
 
@@ -9,4 +9,4 @@ sheet = book.sheets['Current Market Data']
 
 K= sheet['D5'].value
 
-asian_option_pricing(K, option='call')
+asp.asian_option_pricing(K, option='call')
