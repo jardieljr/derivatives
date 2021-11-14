@@ -1,4 +1,5 @@
 import numpy as np
+import brownian_motion_simulation as brow
 
 def asian_option_pricing(K, option='call'):
 
