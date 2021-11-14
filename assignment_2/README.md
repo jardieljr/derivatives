@@ -76,14 +76,14 @@ The given parameters are following:
 ![formula](Images/ud-factor.png)    
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, σ is the annual volatility, and h is the length of a binomial period in years.
 
-We input the parameter and get u=1.1972, d=0.8025.
+We input the parameter and get u=1.0095, d=0.98847.
 
 2) The risk-neutral probability fumula in one period is
 
 ![formula](Images/risk-nprob.png)    
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factor per period.  
 
-We input the parameter and get p*=0.5081.
+We input the parameter and get p*=0.54475.
 
 3) According to the given formula, we use the arithmetic average of realized stock prices as the strike price on day K.
 ![formula](Images/CT-asian.png)
