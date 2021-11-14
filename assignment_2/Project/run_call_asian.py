@@ -5,8 +5,8 @@ import numpy as np
 
 #Open a new excel
 
-app = xw.App()
-app.books['../Derivatives_Project_2.xlsm']
+app = ws.App(visible=True)
+book = app.books.open('Derivatives_Project_2.xlsm')
 sheet = book.sheets['Current Market Data']
 
 K= sheet['D5'].value
