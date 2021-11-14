@@ -1,3 +1,5 @@
+import numpy as np
+
 def asian_option_pricing(K, option='call'):
 
     S = np.zeros((M + 1, I))    
