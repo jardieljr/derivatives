@@ -1,6 +1,8 @@
 import xlwings as ws
 import asian_option_pricing as asp
 
+import numpy as np
+
 #Open a new excel
 
 app = xw.App()
