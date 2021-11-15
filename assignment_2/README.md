@@ -123,7 +123,7 @@ The main characteristics for the option
 
 * continuously compounded dividend δ = 0.146%
 
-* r = 1.0% 
+* r = 1.0% (five year treasury bonds yield)
 
 * T=  125 days
 
