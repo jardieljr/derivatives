@@ -139,7 +139,7 @@ The put price of american option is €0.2076.
 
 ![screenshot](Images/put-price.jpeg)
 
-4) Conclusion and Observations
+# Conclusion and Observations
 
 
 
