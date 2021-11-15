@@ -20,7 +20,7 @@ A plethora of method exist to price options, for instance, as previously studied
 
 In this vein, the objective of this assignment is based on the applications to the pricing of an American or Exotic option, using the Monte Carlo Simulations by the means of Excel and VBA. For our case, our focal point will be laid on American options. 
 
-The document is structured as follows: the first part will explain the foundations of the monte Carlo simulation method, the second part will focus on pricing an Asian option by Binomial model and the third part will discuss pricing an American option in different methods like binomial model or monte Carlo simulation based on Black-Scholes-Merton model. 
+The document is structured as follows: the first part will explain the foundations of the monte Carlo simulation method, the second part will focus on pricing an Asian option by Binomial model and the third part will discuss pricing an American option in different methods like binomial model or monte Carlo simulation based on discrete stochastic process model. 
 
 # Foundation of Monte Carlo Simulation method on pricing options
 Monte Carlo simulation is a random simulation calculation approach based on probability statistics and random sampling. According to the reference book(derivatives market by Robert L.Mcdonald), Monte Carlo valuation on options depends critically on risk-neutral valuation. It is performed using the risk-neutral distribution, where we assume that assets earn the risk-free rate on average and then discount the expected payoff using the risk-free rate. In monte Carlo valuation, we perform a calculation similar to that in this equation:
@@ -41,13 +41,6 @@ The pros and cons of Monte Carlo valuation are as follows:
 * One of the disadvantages of the Monte Carlo method is that it is not suitable to price an American option that can be exercised in advance. 
 
 *	The least-square Monte Carlo simulation method proposed by Longstaff \ Schwartz is a widely used standard method in pricing American options by the Monte Carlo valuation. 
-
-
-
-
-
-
-
 
 
 # Part I :  Asian option by given parameters 
