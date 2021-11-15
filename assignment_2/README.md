@@ -129,7 +129,7 @@ The main characteristics for the option
 
 3) We input all the parameters in the model and generate the result. 
 
-![screenshot](Images/inputs.jpeg)
+![screenshot](Images/inputs-small.jpeg)
 
 The call price of american option is €51.92.
 
@@ -140,14 +140,6 @@ The put price of american option is €0.2076.
 ![screenshot](Images/put-price.jpeg)
 
 4) Conclusion and Observations
-
-
-
-
-
-
-
-
 
 
 
