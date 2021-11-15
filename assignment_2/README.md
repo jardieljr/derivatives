@@ -98,17 +98,18 @@ The option price and hedging ratio at all nodes of the binomial tree:
 # Part II :  price an American Option 
 In this part, we designed a VBA model to price an American option using binomial model and Monte carlo simulation(short for MCS) based on a discrete stochastic process(binomial distribution)
 
-1) The market price of the target asset ( Airbus SE)is following:
-Stock price =$xxx, Strike price=$xxx, quoted call price=$xxx
-(K,T)=(xx,xx)  Matrurity time= 30 days
+1) The market price of the target asset (APPLE)is following:
+Stock price =$150.44, Strike price=$100, quoted call price=$51.74, quoted put price=$0.58, Matrurity time= 125 days(March/18/2022)
+
+![Price](Images/apple-call.png)   ![Price](Images/apple-put.png)
 
 2) Data collecation and computation of the characteristics of the stock
 
-We calculate the daily return of Airbus stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility 34.97%. So we set the annual volatility of the stock σ = 35%.
+We calculate the daily return of Apple stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility 19.82%. 
 
 ![formula](Images/volitality.png)
 
-We get the dividend payments of Airbus SE for the past 5 years, and calculate both the annual dividend yield and the average annual dividend yield. Further to get the compute the continuously compound dividend, we use δ = ln(1+average annual dividend yield) to get the continuously compound dividend yield. The continuously compound dividend of the stock δ = 1.86%.
+We get the dividend payments of Apple stock, and calculate both the annual dividend yield and the average annual dividend yield. Further to get the compute the continuously compound dividend, we use δ = ln(1+average annual dividend yield) to get the continuously compound dividend yield. The continuously compound dividend of the stock δ = 0.146%.
 
 ![formula](Images/dividend-yield.png)
 
@@ -116,25 +117,29 @@ We choose SOFR monthly rate to be the risk free rate, r=0.05%.
 
 The main characteristics for the option 
 
-* Return µ =15.92%
+* Return µ =1.581%
 
-* Volitality σ =35%
+* Volitality σ =19.82%
 
-* continuously compounded dividend δ = 1.86%
+* continuously compounded dividend δ = 0.146%
 
-* r = 0.05 (SOFR 30 days average)
+* r = 1.0% 
 
-* T=  30 days
+* T=  125 days
 
-3) Result price of american option using binomial model
+3) We input all the parameters in the model and generate the result. 
 
+![screenshot](Images/inputs.jpeg)
 
+The call price of american option is €51.92.
 
-4) Result price of american option using Monte Carlo Simulation based on binomial(possion) distribution
+![screenshot](Images/call-price.jpeg)
 
+The put price of american option is €0.2076.
 
+![screenshot](Images/put-price.jpeg)
 
-5) Conclusion and Observations
+4) Conclusion and Observations
 
 
 
