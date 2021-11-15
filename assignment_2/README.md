@@ -83,7 +83,7 @@ We input the parameter and get u=1.0095, d=0.98847.
 ![formula](Images/risk-nprob.png)    
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factor per period.  
 
-We input the parameter and get p*=0.54475.
+We input the parameter and get p*=0.4974.
 
 3) According to the given formula, we use the arithmetic average of realized stock prices as the strike price on day K.
 ![formula](Images/CT-asian.png)
