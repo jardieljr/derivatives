@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline
 
 S0 = 100. #Stock Price
 r = 0.01 #risk free rate
