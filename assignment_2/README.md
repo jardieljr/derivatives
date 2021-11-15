@@ -103,41 +103,41 @@ xxxxx xxxxx
 The option price and hedging ratio at all nodes of the binomial tree:
 
 # Part II :  price an American Option 
-In this part, we designed a VBA model to price an American option using binomial model and 
-Monte carlo simulation(short for MCS) based on a continuous stochastic process(geometric brownian motion as in the Black-Merton-Scholes model)
+In this part, we designed a VBA model to price an American option using binomial model and Monte carlo simulation(short for MCS) based on a discrete stochastic process(binomial distribution)
 
-1) The market price of the target asset ( apple, AAPL )is following:
-Stock price =$xxx, Strike price=$xxx,quoted call price=$xxx
+1) The market price of the target asset ( Airbus SE)is following:
+Stock price =$xxx, Strike price=$xxx, quoted call price=$xxx
 (K,T)=(xx,xx)  Matrurity time= 30 days
 
-2) data collecation and computation of the characteristics of the stock
+2) Data collecation and computation of the characteristics of the stock
 
-We calculate the daily return of XXX stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility XXX. So we set the annual volatility of the stock σ = XXX.
+We calculate the daily return of Airbus stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility 34.97%. So we set the annual volatility of the stock σ = 35%.
 
-We get the dividend payments of XXX for the past 5 years, and calculate both the annual dividend yield and the average annual dividend yield. Further to get the compute the continuously compound dividend, we use δ = ln(average annual dividend yield) to get the continuously compound dividend yield. The continuously compound dividend of the stock δ = XXX. 
+![formula](Images/volitality.png)
 
-we choose SOFR monthly rate to be the risk free rate.
+We get the dividend payments of Airbus SE for the past 5 years, and calculate both the annual dividend yield and the average annual dividend yield. Further to get the compute the continuously compound dividend, we use δ = ln(1+average annual dividend yield) to get the continuously compound dividend yield. The continuously compound dividend of the stock δ = 1.86%.
 
-֍the main characteristics for the option 
+![formula](Images/dividend-yield.png)
 
-Return µ =xxxx
+We choose SOFR monthly rate to be the risk free rate, r=0.05%.
 
-Volitality σ =√252* daily volitality
+The main characteristics for the option 
 
-continuously compounded dividend δ = xxxx
+* Return µ =15.92%
 
-r = xx (risk-free rate, SOFR 3 MONTH)
+* Volitality σ =35%
 
-T=  xx days
+* continuously compounded dividend δ = 1.86%
 
-N=  xx (each period 1 day)
+* r = 0.05 (SOFR 30 days average)
 
-3) result price of american option using binomial model
+* T=  30 days
+
+3) Result price of american option using binomial model
 
 
 
-4) result price of american option using Monte Carlo Simulation based on Black-Merton-Scholes model
-
+4) Result price of american option using Monte Carlo Simulation based on binomial(possion) distribution
 
 
 
