@@ -76,7 +76,7 @@ The given parameters are following:
 ![formula](Images/ud-factor.png)    
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, σ is the annual volatility, and h is the length of a binomial period in years.
 
-We input the parameter and get u=1.0095, d=0.98847.
+We input the parameter and get u=1.0105, d=0.9895.
 
 2) The risk-neutral probability fumula in one period is
 
