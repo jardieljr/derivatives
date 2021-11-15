@@ -1,1 +1,1 @@
-american_option_pricing(K, option='put')
+american_option_pricing(K, option='call')
