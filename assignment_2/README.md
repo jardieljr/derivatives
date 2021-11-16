@@ -1,4 +1,4 @@
-# Financial Derivatives - Group Assignment 2- Option Pricing an American or exotic option (Asian Option)
+# Financial Derivatives - Group Assignment 2- Option Pricing an American or Exotic Option (Asian Option)
 
 ## TSM project - M2 FiRE
 ![Screenshot](Images/TSM_Logo.png)
