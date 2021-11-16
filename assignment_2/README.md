@@ -29,8 +29,7 @@ The document is structured as follows: the first part will explain the foundatio
 
 Monte Carlo simulation is a random simulation calculation approach based on probability statistics and random sampling. According to the reference book ("Derivatives market" by Robert L.Mcdonald), Monte Carlo valuation on options depends critically on risk-neutral valuation. It is performed using the risk-neutral distribution, where we assume that assets earn the risk-free rate on average and then discount the expected payoff using the risk-free rate. In Monte Carlo valuation, we perform a calculation similar to that in this equation:
 
-![formula](Images/MCS-formula.png)
-![formula](Images/MC1.gif)
+![formula](Images/MCeq.png)
 
 where ST is n randomly drawn time T stock prices, payoff V(ST,T), the time-0 price, V(S0,0).
 
