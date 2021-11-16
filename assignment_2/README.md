@@ -27,7 +27,7 @@ The document is structured as follows: the first part will explain the foundatio
 
 # Foundation of Monte Carlo Simulation method on pricing options
 
-Monte Carlo simulation is a random simulation calculation approach based on probability statistics and random sampling. According to the reference book ("Derivatives market" by Robert L.Mcdonald), Monte Carlo valuation on options depends critically on risk-neutral valuation. It is performed using the risk-neutral distribution, where we assume that assets earn the risk-free rate on average and then discount the expected payoff using the risk-free rate. In Monte Carlo valuation, we perform a calculation bast on BMS (continuous stochastic process) similar to that in this equation:
+Monte Carlo simulation is a random simulation calculation approach based on probability statistics and random sampling. According to the reference book ("Derivatives market" by Robert L.Mcdonald), Monte Carlo valuation on options depends critically on risk-neutral valuation. It is performed using the risk-neutral distribution, where we assume that assets earn the risk-free rate on average and then discount the expected payoff using the risk-free rate. In Monte Carlo valuation, we perform a calculation based on BMS (continuous stochastic process) similar to that in this equation:
 
 ![formula](Images/MCeq.png)
 
@@ -104,9 +104,10 @@ The call option price and hedging ratio at all nodes of the binomial tree:
 ![screenshot](Images/hedge-ratio-call.png)
 
 # Part II :  price an American Option 
-In this part, we designed a VBA model to price an American option using binomial model and Monte carlo simulation(short for MCS) based on a continuous stochastic process
+In this part, we designed a VBA model to price an American option using binomial model and Monte carlo simulation(short for MCS) based on a continuous stochastic process.
 
 1) The market price of the target asset (AIRBUS)is following:
+2) 
 Stock price =$114.90, Strike price=$100, quoted call price=$15.15, quoted put price=$3.09, Matrurity time= 60 days
 
 ### Call
@@ -117,7 +118,7 @@ Stock price =$114.90, Strike price=$100, quoted call price=$15.15, quoted put pr
 
 2) Data collecation and computation of the characteristics of the stock
 
-We calculate the daily return of AIRBUS stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility 35%. 
+We calculate the daily return of AIRBUS stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility of 35%. 
 
 ![formula](Images/volitality.png)
 
@@ -157,17 +158,17 @@ The main characteristics for the option
 ![screenshot](Images/a-put.jpeg)
 (screen of the Monte Carlo - VBA pricing)
 
-As we explained before, even if the order of magnitude is consistent for the three different pricing processes, we notice here that the pricing is very accurate using our app, maximising the trade-off between accuracy and runtime of the process. Hence, we will privilege the Monte Carlo approach reliying on a continuous stochastic model.
+As we explained before, even if the order of magnitude is consistent for the three different pricing processes, we notice here that the pricing is very accurate using our app, maximising the trade-off between accuracy and runtime of the process. Hence, we will privilege running the Monte Carlo approach reliying on a continuous stochastic model with at least 10000 simulation for optimization purposes.
 
 # Models Stability & Flexibilty observations - Limitations
 
 ## Monte Carlo Model
 
-Our VBA model using Monte Carlo simulations on BMS (continuous stochastic approach) has proven to have an order of magnitude consistent with the real option prices in the different configurations we set it up for american options. However, to price american options or asian options, this VBA model is not precise as precise as our app. Indeed, we noticed that the expected returns and the volatility movements are highly impacting our final option pricing process using VBA. Plus, the number of simulations that can be run using our VBA model is capped to few hundreds simulations (otherwise, the runtime is going to take a while and the file can crash - we advise the user to use 100 simulations or 200 max). On the other hand, our app simulations proved to be very accurate, robust, very fast. In practise, we noticed just small deviations from theoretical options prices for both american and asian options. Using this app, no deviations from the theoretical price have been noticed. Hence, by computing the Monte Carlo model using both our VBA & app approach allow us to enhance further our model reliability, and most importantly allows us to understand the critical aspects of Monte Carlo simulations on VBA.
+Our VBA model using Monte Carlo simulations on BMS (continuous stochastic approach) has proven to have an order of magnitude consistent with the real option prices in the different configurations we set it up for american options. However, to price american options or asian options, this VBA model is not precise as precise as our app. Indeed, we noticed that the expected returns and the volatility movements are highly impacting our final option pricing process using VBA. The sensitivity of this option pricing to these factors is strong. Plus, the number of simulations that can be run using our VBA model is capped to a few hundreds simulations (otherwise, the runtime is going to take a while and the file can crash - we advise the user to use 100 simulations or 200 max on VBA). On the other hand, our app simulations proved to be very accurate, robust and very fast. In practise, we noticed just small deviations from theoretical options prices for both american and asian options. Using this app, no deviations from the theoretical price have been noticed. Hence, by computing the Monte Carlo model using both our VBA & app approach allow us to enhance further our model reliability, and most importantly allow us to understand the critical aspects of Monte Carlo simulations on VBA.
 
 Pricing american options, one must consider the continuation value of the option given that he can exercize the option before maturity. To add this continuation value to a typical european option, we used the LSM technique (Least-Squares Monte Carlo approach). With this consideration, we find that the actual price converges to the true price.
 
-In order to perform the LSM technique we built an application to be used as an additional tool with the excel model implemented. Below you are able to have the first impressions of this app and the inputs needed to use it. The application is available for both Mac and Windows users.
+In order to perform the LSM technique we built an application to be used as an additional tool with the excel model implemented. Bellow you are able to have the first impressions of this app and the inputs needed to use it. The application is available for both Mac and Windows users.
 
 ![screenshot](Images/first_page_app.png)
 
@@ -179,14 +180,14 @@ Regarding now the flexibility of the model, we can easily and quickly switch fro
 On our app, we can change the inputs, running Monte Carlo in parallel of the VBA process, which would enable to compare the pricing for two different configurations at the same time.
 By trials and errors using multiple inputs on our app, we find that this Monte Carlo method is the most reliable one. This observation is consistent with the fact that Monte Carlo simulations using continuous stochastic aprroach is most commonly used in the industry to perform option pricing.
 
-A button on the excel sheet allowing to execute the app would have been more handy to the user. Indeed, for now he has to execute the file located in the folder for now. So, he must run it "by hand" in parallel to the excel sheet instead of being totally incorporated to the file. This can be seen as a limitation of our pricing model.
+A button on the excel sheet allowing to execute the app would have been more handy to the user. Indeed, for now he has to execute the file located in the folder. So, he must run it "by hand" in parallel to the excel sheet instead of being totally incorporated to the file. This can be seen as a limitation of our pricing model.
 
 However, some observations made the Binomial Model relevant and interesting in some configurations.
 
 ## Binomial Model
 
 As a matter of fact, we noticed that for the Airbus option pricing, the binomial model proved to be more accurate than with our Monte Carlo VBA Simulations (with 200 simulations) considering various maturities.
-Furthermore, we can notice an enhanced accuracy of this model for option maturity times close to 1 year, which was the case with our Airbus option pricing. This could be explained by the binomial tree decomposition in 12 periods in adequation with the maturity time, which allowed to increase our digits decomposition and expand our scalability whereas the linear model of the B&S strategy only enabled a capped accuracy.
+Furthermore, we can notice an enhanced accuracy of this model for option maturity times close to 1 year, which was the case with our Airbus option pricing. This could be explained by the binomial tree decomposition in 12 periods in adequation with the maturity time, which allowed to increase our digits decomposition and expand our scalability.
 
 Both the binomial model and the Black-Scholes formula are based on the risk-neutral free policy, the Black-Scholes formula is a limiting case of the binomial formula for the price of a European option. In other words, if the binomial model can divide the time into infinite periods, they are the same. But the derivation of the Black-Scholes formula makes a assumption of continuous and continuously compounded returns on the stock are normally distributed. For the binomial, it’s discrete which allows us to exercise the option at any point of the periods. So binomial model can work effectively with a complex option such as paying discrete dividends, American options which may exercise the option before the expiration. The Black-Scholes formula is more suitable for the European option which doesn’t allow to exercise in advance.
 
@@ -194,9 +195,9 @@ However, we advise the user to always keep a critical eye on this binomial metho
 
 To price an option with a maturity of few weeks or numerous years, we will privilege the Monte Carlo approach run in our app which will enhance reliability and robustness for both asian and american options pricing.
 
-This can be due to the fact that first, the B&S model relies its computation on a normal distribution, continuously, whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
+This can be due to the fact that first, the Monte Carlo B&S model relies its computation on a normal distribution, continuously, whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
 
-![Screenshot](Images/Comparison_GIthub.jpeg)
+![Screenshot](Images/Comparison_GIthub.jpeg) (Plot 1)
 
 Plus, the Monte Carlo approach allow to run numerous times the BMS simulation, applying it a shock at each iteration and averaging the results computed. This is a statistically more stable approach which will enable less error measurements on our final option price than the binomial approach. As a matter of fact, we notice after numerous trials that the Monte Carlo simulation filter all the noise in our option price using the app for simulation number above 10000 (this number of simulations can't be computed using our VBA model only with our app).
 
