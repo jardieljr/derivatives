@@ -187,6 +187,9 @@ However, we advise the user to always keep a critical eye on this binomial metho
 To price an option with a maturity of few weeks or numerous years, we will privilege the Monte Carlo approach ran in our app which will enhance reliability and robustness for both asian and american options pricing.
 
 This can be due to the fact that first, the B&S model relies its computation on a normal distribution, continuously, whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
+
+![Screenshot](images/Comparison_GIthub.jpeg)
+
 Plus, the Monte Carlo approach allow to run numerous times the BMS simulation, applying it a shock at each iteration and averaging the results computed. This is a statistically more stable approach which will enable less error measurements on our final option price than the binomial approach. As a matter of fact, we notice after numerous trials that the Monte Carlo simulation filter all the noise in our option price using the app for simulation number above 10000 (this number of simulations can't be computed using our VBA model only with our app).
 
 
