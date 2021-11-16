@@ -91,7 +91,7 @@ We input the parameter and get p*=0.4974.
 
 ![formula](Images/CT-asian.png)
 
-then the payoff of the call option is the area between the max prices and strik price(the average prices):
+then the payoff of the call option is the area between the max prices(orange line) and strik price(the average prices-blue line):
 
 ![screenshot](Images/payoff-1.jpg)
 
