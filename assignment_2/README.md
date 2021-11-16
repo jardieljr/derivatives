@@ -91,7 +91,7 @@ We input the parameter and get p*=0.4974.
 
 ![formula](Images/CT-asian.png)
 
-then the payoff of the call option is the area between the max prices(orange line) and strik price(the average prices-blue line):
+then the payoff of the call option is the area between the max prices and strik price(the average prices):
 
 ![screenshot](Images/payoff-1.jpg)
 
@@ -158,6 +158,15 @@ The put price of american option is €6.14.
 Our VBA model using Monte Carlo simulations on BMS (continuous stochastic approach) has proven to have an order of magnitude consistent with the real option prices in the different configurations we set it up for american options. However, to price american options or asian options, this VBA model is not precise as precise as our app. Indeed, we noticed that the expected returns and the volatility movements are highly impacting our final option pricing process using VBA. Plus, the number of simulations that can be run using our VBA model is capped to few hundreds simulations (otherwise, the runtime is going to take a while and the file can crash - we advise the user to use 100 simulations or 200 max). On the other hand, our app simulations proved to be very accurate, robust, very fast. In practise, we noticed just small deviations from theoretical options prices for both american and asian options. Using this app, no deviations from the theoretical price have been noticed. Hence, by computing the Monte Carlo model using both our VBA & app approach allow us to enhance further our model reliability, and most importantly allows us to understand the critical aspects of Monte Carlo simulations on VBA.
 
 Pricing american options, one must consider the continuation value of the option given that he can exercize the option before maturity. To add this continuation value to a typical european option, we used the LSM technique (Least-Squares Monte Carlo approach). With this consideration, we find that the actual price converges to the true price.
+
+In order to perform the LSM technique we built an application in python to be used as an additional tool with the excel model implemented. Below you are able to have the first impressions of this app and the inputs needed to use it.
+
+
+![screenshot](Images/first_page_app.png)
+
+![screenshot](Images/second_page_app.png)
+
+
 
 Regarding now the flexibility of the model, we can easily and quickly switch from inputs to pricing computations using our model.
 On our app, we can change the inputs, running Monte Carlo in parallel of the VBA process, which would enable to compare the pricing for two different configurations at the same time.
