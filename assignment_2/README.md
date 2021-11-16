@@ -141,7 +141,7 @@ The put price of american option is €0.2076.
 
 # Models Stability & Flexibilty observations - Limitations
 
-## Black & Scholes Model
+## Monte Carlo Model
 
 Our model has proven to be robust and accurate in all the configurations we set it up for the option pricing. No deviations from the theoretical price (calculated using B&S pricing calculators online) have been noticed. Plus, by computing the B&S model using both an Excel & VBA approach allow us to enhance further our model reliability. As a matter of fact, the pricing performed by these two approaches (Excel & VBA) give always the same result at 10^-3.
 
