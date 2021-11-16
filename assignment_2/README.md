@@ -104,20 +104,20 @@ The call option price and hedging ratio at all nodes of the binomial tree:
 ![screenshot](Images/hedge-ratio-call.png)
 
 # Part II :  price an American Option 
-In this part, we designed a VBA model to price an American option using binomial model and Monte carlo simulation(short for MCS) based on a discrete stochastic process(binomial distribution)
+In this part, we designed a VBA model to price an American option using binomial model and Monte carlo simulation(short for MCS) based on a continuous stochastic process
 
-1) The market price of the target asset (APPLE)is following:
+1) The market price of the target asset (AIRBUS)is following:
 Stock price =$114.90, Strike price=$100, quoted call price=$15.15, quoted put price=$3.09, Matrurity time= 60 days
 
 ![Price](Images/airbus-call.jpeg)   ![Price](Images/airbus-put.jpeg)
 
 2) Data collecation and computation of the characteristics of the stock
 
-We calculate the daily return of Apple stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility 35%. 
+We calculate the daily return of AIRBUS stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility 35%. 
 
 ![formula](Images/volitality.png)
 
-We get the dividend payments of Apple stock, and calculate both the annual dividend yield and the average annual dividend yield. Further to get the compute the continuously compound dividend, we use δ = ln(1+average annual dividend yield) to get the continuously compound dividend yield. The continuously compound dividend of the stock δ = 1.86%.
+We get the dividend payments of AIRBUS stock, and calculate both the annual dividend yield and the average annual dividend yield. Further to get the compute the continuously compound dividend, we use δ = ln(1+average annual dividend yield) to get the continuously compound dividend yield. The continuously compound dividend of the stock δ = 1.86%.
 
 ![formula](Images/dividend-yield.png)
 
