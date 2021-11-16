@@ -157,6 +157,8 @@ The main characteristics for the option
 ![screenshot](Images/a-put.jpeg)
 (screen of the Monte Carlo - VBA pricing)
 
+As we explained before, even if the order of magnitude is consistent for the three different pricing processes, we notice here that the pricing is very accurate using our app, maximising the trade-off between accuracy and runtime of the process.
+
 # Models Stability & Flexibilty observations - Limitations
 
 ## Monte Carlo Model
