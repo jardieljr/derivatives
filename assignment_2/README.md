@@ -143,11 +143,15 @@ The main characteristics for the option
 
 ![screenshot](Images/input-airbus.jpeg)
 
-The call price of american option is €31.75.
+The call price of american option is €31.75 (using Monte Carlo - VBA).
+The call price of american option is €15.19 (using Monte Carlo - app).
+The call price of american option is €10.41 (using binomial model).
 
 ![screenshot](Images/a-call.jpeg)
 
-The put price of american option is €6.14.
+The put price of american option is €6.14 (using Monte Carlo - VBA).
+The call price of american option is €3.16 (using app).
+The call price of american option is €3.8922 (using binomial model).
 
 ![screenshot](Images/a-put.jpeg)
 
