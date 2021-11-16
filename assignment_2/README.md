@@ -69,6 +69,8 @@ The given parameters are following:
 
 * S0=$100
 
+To constantly update the data to be considered as a strike price for the asian option pricing, we implemenented a Power Query request which updates in real-time the data to be considered in the market, average it and consider it in the pricing process. To do so, the user must specify the trading date in the "Inputs file" for the data to be considered from this specific trading date to the final date when the user performs the pricing.
+
 1) Considering deviation of paying compounded dividend, we will model the stock returns of each period by u (up-factor per step) and d (down-factor per step) using the equations.
 
 ![formula](Images/ud-factor.png)
