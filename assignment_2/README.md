@@ -160,10 +160,7 @@ Our VBA model using Monte Carlo simulations on BMS (continuous stochastic approa
 Pricing american options, one must consider the continuation value of the option given that he can exercize the option before maturity. To add this continuation value to a typical european option, we used the LSM technique (Least-Squares Monte Carlo approach). With this consideration, we find that the actual price converges to the true price.
 
 In order to perform the LSM technique we built an application in python to be used as an additional tool with the excel model implemented. Below you are able to have the first impressions of this app and the inputs needed to use it.
-
-
 ![screenshot](Images/first_page_app.png)
-
 ![screenshot](Images/second_page_app.png)
 
 
