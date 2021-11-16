@@ -107,45 +107,45 @@ The call option price and hedging ratio at all nodes of the binomial tree:
 In this part, we designed a VBA model to price an American option using binomial model and Monte carlo simulation(short for MCS) based on a discrete stochastic process(binomial distribution)
 
 1) The market price of the target asset (APPLE)is following:
-Stock price =$150.44, Strike price=$100, quoted call price=$51.74, quoted put price=$0.58, Matrurity time= 125 days(March/18/2022)
+Stock price =$114.90, Strike price=$100, quoted call price=$15.15, quoted put price=$3.09, Matrurity time= 60 days
 
-![Price](Images/apple-call.png)   ![Price](Images/apple-put.png)
+![Price](Images/airbus-call.jpeg)   ![Price](Images/airbus-put.jpeg)
 
 2) Data collecation and computation of the characteristics of the stock
 
-We calculate the daily return of Apple stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility 19.82%. 
+We calculate the daily return of Apple stock prices, and compute the daily volatility of the stock, then we use the formula(daily volatility * √252 ) to get the annual volatility 35%. 
 
 ![formula](Images/volitality.png)
 
-We get the dividend payments of Apple stock, and calculate both the annual dividend yield and the average annual dividend yield. Further to get the compute the continuously compound dividend, we use δ = ln(1+average annual dividend yield) to get the continuously compound dividend yield. The continuously compound dividend of the stock δ = 0.146%.
+We get the dividend payments of Apple stock, and calculate both the annual dividend yield and the average annual dividend yield. Further to get the compute the continuously compound dividend, we use δ = ln(1+average annual dividend yield) to get the continuously compound dividend yield. The continuously compound dividend of the stock δ = 1.86%.
 
 ![formula](Images/dividend-yield.png)
 
-We choose SOFR monthly rate to be the risk free rate, r=0.05%.
+We choose 10-year treasury bond yield to be the risk free rate, r=1.59%.
 
 The main characteristics for the option 
 
-* Return µ =1.581%
+* Expected return µ =10%
 
-* Volitality σ =19.82%
+* Volitality σ =35%
 
-* continuously compounded dividend δ = 0.146%
+* dividend δ = 1.88%
 
-* r = 1.0% (five year treasury bonds yield)
+* r = 1.59% 
 
-* T=  125 days
+* T=  60 days
 
 3) We input all the parameters in the model and generate the result. 
 
-![screenshot](Images/inputs-small.jpeg)
+![screenshot](Images/input-airbus.jpeg)
 
-The call price of american option is €51.92.
+The call price of american option is €31.75.
 
-![screenshot](Images/call-price.jpeg)
+![screenshot](Images/a-call.jpeg)
 
-The put price of american option is €0.2076.
+The put price of american option is €6.14.
 
-![screenshot](Images/put-price.jpeg)
+![screenshot](Images/a-put.jpeg)
 
 # Models Stability & Flexibilty observations - Limitations
 
