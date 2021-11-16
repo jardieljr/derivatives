@@ -139,6 +139,40 @@ The put price of american option is €0.2076.
 
 ![screenshot](Images/put-price.jpeg)
 
+# Models Stability & Flexibilty observations - Limitations
+
+## Black & Scholes Model
+
+Our model has proven to be robust and accurate in all the configurations we set it up for the option pricing. No deviations from the theoretical price (calculated using B&S pricing calculators online) have been noticed. Plus, by computing the B&S model using both an Excel & VBA approach allow us to enhance further our model reliability. As a matter of fact, the pricing performed by these two approaches (Excel & VBA) give always the same result at 10^-3.
+
+Regarding now the flexibility of the model, we can easily and quickly switch from inputs to pricing computations using our model. By trials and errors using multiple inputs, we find that this method is the most reliable one. This observation is consistent with the fact that B&S is most commonly used in the industry to perform option pricing.
+
+However, some observations made the Binomial Model relevant and interesting in some configurations.
+
+## Binomial Model
+
+As a matter of fact, we noticed that for the Airbus option pricing, the binomial model proved to be more accurate than the B&S model with a maturity time of 1 year, the result was closer to the real trading price.
+We can notice an enhanced accuracy of this model for option maturity times close to 1 year, which was the case with our Airbus option pricing. This could be explained by the binomial tree decomposition in 12 periods in adequation with the maturity time, which allowed to increase our digits decomposition and expand our scalability whereas the linear model of the B&S strategy only enabled a capped accuracy.
+
+Both the binomial model and the Black-Scholes formula are based on the risk-neutral free policy, the Black-Scholes formula is a limiting case of the binomial formula for the price of a European option. In other words, if the binomial model can divide the time into infinite periods, they are the same. But the derivation of the Black-Scholes formula makes a assumption of continuous and continuously compounded returns on the stock are normally distributed. For the binomial, it’s discrete which allows us to exercise the option at any point of the periods. So binomial model can work effectively with a complex option such as paying discrete dividends, American options which may exercise the option before the expiration. The Black-Scholes formula is more suitable for the European option which doesn’t allow to exercise in advance.
+
+However, we advise the user to always keep a critical eye on this binomial method. As a matter of fact, we notice that our pricing accuracy degrade when we decrease or increase the maturity time, the most stable point being at 1 year of maturity.
+
+Hence, to price an option with a maturity of few weeks or numerous years, we will privilege the B&S approach which will enable reliability and robustness.
+
+
+This can be due to the fact that the B&S model relies its computation on a normal distribution, continuously whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
+
+
+On the other hand, for options with 1 year of maturity, regarding our observations performing both models on several underlying assets, we will prefer the Binomial Model accuracy, regularly closer to the real trading price. Deviating from this maturity of 1 year, we will always choose the B&S appraoch.
+
+## Extra
+
+In order to optimize our model flexibility, we implemented a Power Query request that enables to directly access the market data in real time. Doing it, we can always have the volatility of the underlying asset up-to-date. However, to enhance further this process flexibility we could think of getting the historical dividends as well. That way, both volatility and dividends would be available to the user in real-time and for all the listed stocks on financial markets (available on the **Yahoo Finance** website).
+
+
+
+
 # Conclusion and Observations
 
 
