@@ -88,18 +88,20 @@ where r is the continuously compounded annual interest rate, δ is the continuou
 We input the parameter and get p*=0.4974.
 
 3) According to the given formula, we use the arithmetic average of realized stock prices as the strike price on day K.
+
 ![formula](Images/CT-asian.png)
 
 then the payoff of the call option is the area between the max prices and strik price(the average prices):
-![screenshot](Images/payoff-1.jpg)
 
-The call price will be 
+![screenshot](Images/payoff-1.jpg)
 
 4) the heding ratio formula :
 
 ![formula](Images/Hedging-ratio.png)
 
-The option price and hedging ratio at all nodes of the binomial tree:
+The call option price and hedging ratio at all nodes of the binomial tree:
+
+![screenshot](Images/hedge-ratio-call.png)
 
 # Part II :  price an American Option 
 In this part, we designed a VBA model to price an American option using binomial model and Monte carlo simulation(short for MCS) based on a discrete stochastic process(binomial distribution)
