@@ -109,7 +109,11 @@ In this part, we designed a VBA model to price an American option using binomial
 1) The market price of the target asset (AIRBUS)is following:
 Stock price =$114.90, Strike price=$100, quoted call price=$15.15, quoted put price=$3.09, Matrurity time= 60 days
 
-![Price](Images/airbus-call.jpeg)   ![Price](Images/airbus-put.jpeg)
+### Call
+![Price](Images/airbus-call.jpeg)
+
+### Put
+![Price](Images/airbus-put.jpeg)
 
 2) Data collecation and computation of the characteristics of the stock
 
