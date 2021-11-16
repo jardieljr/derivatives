@@ -1,4 +1,4 @@
-# Financial Derivatives - group assginment 2-Option Pricing an American or exotic option 
+# Financial Derivatives - Group Assignment 2- Option Pricing an American or exotic option (Asian Option)
 
 ## TSM project - M2 FiRE
 ![Screenshot](Images/TSM_Logo.png)
@@ -13,6 +13,7 @@ Huifen CHEN
 **The Excel file to be used comprising our option pricing models can be found in the project repository and is titled *Derivatives_Project_File.xlsm***
 
 # Momento
+
 Like it was thoroughly substantiated in the last assignment, there are two types of options, Call options which allow the owner to buy the underlying asset at strike price stated in the contract within a specific timeframe. 
 On the other hand, Put options allow the owner to sell the underlying asset at the strike price stated in the contract within a specific timeframe. 
 
@@ -20,10 +21,11 @@ A plethora of method exist to price options, for instance, as previously studied
 
 In this vein, the objective of this assignment is based on the applications to the pricing of an American or Exotic option, using the Monte Carlo Simulations by the means of Excel and VBA. For our case, our focal point will be laid on American options. 
 
-The document is structured as follows: the first part will explain the foundations of the monte Carlo simulation method, the second part will focus on pricing an Asian option by Binomial model and the third part will discuss pricing an American option in different methods like binomial model or monte Carlo simulation based on discrete stochastic process model. 
+The document is structured as follows: the first part will explain the foundations of the Monte Carlo simulation method, the second part will focus on pricing an Asian option by Binomial model and the third part will discuss pricing an American option in different methods like binomial model or Monte Carlo simulation based on continuous stochastic process model. 
 
 # Foundation of Monte Carlo Simulation method on pricing options
-Monte Carlo simulation is a random simulation calculation approach based on probability statistics and random sampling. According to the reference book(derivatives market by Robert L.Mcdonald), Monte Carlo valuation on options depends critically on risk-neutral valuation. It is performed using the risk-neutral distribution, where we assume that assets earn the risk-free rate on average and then discount the expected payoff using the risk-free rate. In monte Carlo valuation, we perform a calculation similar to that in this equation:
+
+Monte Carlo simulation is a random simulation calculation approach based on probability statistics and random sampling. According to the reference book ("Derivatives market" by Robert L.Mcdonald), Monte Carlo valuation on options depends critically on risk-neutral valuation. It is performed using the risk-neutral distribution, where we assume that assets earn the risk-free rate on average and then discount the expected payoff using the risk-free rate. In Monte Carlo valuation, we perform a calculation similar to that in this equation:
 
 ![formula](Images/MCS-formula.png)
 
@@ -43,7 +45,8 @@ The pros and cons of Monte Carlo valuation are as follows:
 *	The least-square Monte Carlo simulation method proposed by Longstaff \ Schwartz is a widely used standard method in pricing American options by the Monte Carlo valuation. 
 
 
-# Part I :  Asian option by given parameters 
+# Part I :  Asian option by given parameters
+
 In this part, we designed a binomial model by VBA with continuously compounded dividends to price an Asian option.
 
 Asian option is one of the exotic option which based on the average price over some period of time, so it is an example of a path-dependent option. Normally, asian options are worth less than other equivalent ordinary options due to the less volatitly of the averaged price of the underlying asset.
@@ -64,17 +67,19 @@ The given parameters are following:
 
 * S0=$100
 
-1) considering deviation of paying compounded dividend, we will model the stock returns of each period by u(up-factor per step) and d (down-factor per step) using the equations.
+1) Considering deviation of paying compounded dividend, we will model the stock returns of each period by u (up-factor per step) and d (down-factor per step) using the equations.
 
-![formula](Images/ud-factor.png)    
+![formula](Images/ud-factor.png)
+
 where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, σ is the annual volatility, and h is the length of a binomial period in years.
 
 We input the parameter and get u=1.0105, d=0.9895.
 
-2) The risk-neutral probability fumula in one period is
+2) The risk-neutral probability formula in one period is
 
-![formula](Images/risk-nprob.png)    
-where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factor per period.  
+![formula](Images/risk-nprob.png)
+
+where r is the continuously compounded annual interest rate, δ is the continuous dividend yield, h is the length of a binomial period in years. u and d are the up and down factor per period.
 
 We input the parameter and get p*=0.4974.
 
@@ -89,7 +94,7 @@ The call price will be:
 
 xxxxx xxxxx
 
-4) the heding ratio formula:
+4) the heding ratio formula :
 
 ![formula](Images/Hedging-ratio.png)
 
@@ -145,23 +150,28 @@ The put price of american option is €0.2076.
 
 Our VBA model using Monte Carlo simulations on BMS (continuous stochastic approach) has proven to have an order of magnitude consistent with the real option prices in the different configurations we set it up for american options. However, this VBA model is not precise to price american options or asian options as our app. Indeed, we moticed that the expected returns and the volatility movements are highly impacting our final option pricing process. Plus, the number of simulations that can be ran using our VBA model is capped to few hundreds simulations (otherwise, the runtime is going to take a while and the file can crash - we advise the user to use 100 simulations or 200 max). On the other hand, our app simulations proved to be very accurate, robust, very fast. In practise, we noticed just small deviations from theoretical options prices for both american and asian options. Using this app, no deviations from the theoretical price have been noticed. Hence, by computing the Monte Carlo model using both our VBA & app approach allow us to enhance further our model reliability, and most importantly allow us to understand the critical aspects of monte carlo simulations on VBA.
 
-Regarding now the flexibility of the model, we can easily and quickly switch from inputs to pricing computations using our model. By trials and errors using multiple inputs on our app, we find that this method is the most reliable one. This observation is consistent with the fact that Monte Carlo simulations using continuous stochastic aprroach is most commonly used in the industry to perform option pricing.
+Pricing american options, one must consider the continuation value of the option given that he can exercize the option before maturity. To add this continuation value to a typical european we used the LSM technique (Least-Squares Monte Carlo approach). With this consideration, we find that the actual price converges to the true price.
+
+Regarding now the flexibility of the model, we can easily and quickly switch from inputs to pricing computations using our model.
+On our app, we can change the inputs, running Monte Carlo in parallel to the vba process, which would enable to compare the pricing for two different configurations at the same time.
+By trials and errors using multiple inputs on our app, we find that this Monte Carlo method is the most reliable one. This observation is consistent with the fact that Monte Carlo simulations using continuous stochastic aprroach is most commonly used in the industry to perform option pricing.
+
+A button on the excel sheet allowing to execute the app would have been more handy to the user. Indeed, for now he has to execute the file located in the folder for now. So, he must run it "by hand" in parallel to the excel sheet instead of being totallu incorporated to the file. This can be seen as a limitation of our pricing model.
 
 However, some observations made the Binomial Model relevant and interesting in some configurations.
 
 ## Binomial Model
 
-As a matter of fact, we noticed that for the Airbus option pricing, the binomial model proved to be more accurate than with our Monte Carlo Simulations using BMS model with various maturities.
+As a matter of fact, we noticed that for the Airbus option pricing, the binomial model proved to be more accurate than with our Monte Carlo VBA Simulations (with 200 simulations) considering various maturities.
 Furthermore, we can notice an enhanced accuracy of this model for option maturity times close to 1 year, which was the case with our Airbus option pricing. This could be explained by the binomial tree decomposition in 12 periods in adequation with the maturity time, which allowed to increase our digits decomposition and expand our scalability whereas the linear model of the B&S strategy only enabled a capped accuracy.
 
 Both the binomial model and the Black-Scholes formula are based on the risk-neutral free policy, the Black-Scholes formula is a limiting case of the binomial formula for the price of a European option. In other words, if the binomial model can divide the time into infinite periods, they are the same. But the derivation of the Black-Scholes formula makes a assumption of continuous and continuously compounded returns on the stock are normally distributed. For the binomial, it’s discrete which allows us to exercise the option at any point of the periods. So binomial model can work effectively with a complex option such as paying discrete dividends, American options which may exercise the option before the expiration. The Black-Scholes formula is more suitable for the European option which doesn’t allow to exercise in advance.
 
 However, we advise the user to always keep a critical eye on this binomial method. As a matter of fact, we notice that our pricing accuracy degrade when we decrease or increase the maturity time, the most stable point being at 1 year of maturity.
 
-Hence, to price an option with a maturity of few weeks or numerous years, we will privilege the Monte Carlo approach ran in our app which will enable reliability and robustness for both asian and american options.
+To price an option with a maturity of few weeks or numerous years, we will privilege the Monte Carlo approach ran in our app which will enhance reliability and robustness for both asian and american options pricing.
 
-
-This can be due to the fact that first, the B&S model relies its computation on a normal distribution, continuously whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
+This can be due to the fact that first, the B&S model relies its computation on a normal distribution, continuously, whereas the binomial model performs its computation discretly segmented in numerous steps. On one hand, the normal distribution will enable a stable accuracy on its "legs" deviating from its optimium stability point whereas the binomial model accuracy will decrease relatively to the B&S model due to this discrete compuatation (see Plot 1).
 Plus, the Monte Carlo approach allow to run numerous times the BMS simulation, applying it a shock at each iteration and averaging the results computed. This is a statistically more stable approach which will enable less error measurements on our final option price than the binomial approach. As a matter of fact, we notice after numerous trials that the Monte Carlo simulation filter all the noise in our option price using the app for simulation number above 10000 (this number of simulations can't be computed using our VBA model only with our app).
 
 
