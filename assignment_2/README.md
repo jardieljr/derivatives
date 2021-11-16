@@ -90,13 +90,10 @@ We input the parameter and get p*=0.4974.
 3) According to the given formula, we use the arithmetic average of realized stock prices as the strike price on day K.
 ![formula](Images/CT-asian.png)
 
-then the payoff of the call option:
+then the payoff of the call option is the area between the max prices and strik price(the average prices):
+![screenshot](Images/payoff-1.jpg)
 
-xxxxx xxxxx
-
-The call price will be:
-
-xxxxx xxxxx
+The call price will be 
 
 4) the heding ratio formula :
 
