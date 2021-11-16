@@ -188,9 +188,6 @@ In order to optimize our model flexibility, we implemented a Power Query request
 
 
 
-# Conclusion and Observations
-
-
 
 
 
